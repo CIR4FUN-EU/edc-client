@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.suspend_transfer_v3 import SuspendTransferV3
+from edc_client.models.suspend_transfer_v3 import SuspendTransferV3
 
 # TODO update the JSON string below
 json = "{}"

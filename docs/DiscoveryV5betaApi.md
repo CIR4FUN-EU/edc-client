@@ -1,4 +1,4 @@
-# openapi_client.DiscoveryV5betaApi
+# edc_client.DiscoveryV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,25 +16,25 @@ Discovers the dataspace profiles usable to communicate with a counter party. Res
 
 
 ```python
-import openapi_client
-from openapi_client.models.discovery_request_schema import DiscoveryRequestSchema
-from openapi_client.models.discovery_response_schema import DiscoveryResponseSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.discovery_request_schema import DiscoveryRequestSchema
+from edc_client.models.discovery_response_schema import DiscoveryResponseSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DiscoveryV5betaApi(api_client)
+    api_instance = edc_client.DiscoveryV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    discovery_request_schema = openapi_client.DiscoveryRequestSchema() # DiscoveryRequestSchema |  (optional)
+    discovery_request_schema = edc_client.DiscoveryRequestSchema() # DiscoveryRequestSchema |  (optional)
 
     try:
         api_response = api_instance.discover_v5(participant_context_id, discovery_request_schema=discovery_request_schema)

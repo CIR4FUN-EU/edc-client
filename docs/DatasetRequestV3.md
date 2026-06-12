@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dataset_request_v3 import DatasetRequestV3
+from edc_client.models.dataset_request_v3 import DatasetRequestV3
 
 # TODO update the JSON string below
 json = "{}"

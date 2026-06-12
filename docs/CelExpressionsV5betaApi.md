@@ -1,4 +1,4 @@
-# openapi_client.CelExpressionsV5betaApi
+# edc_client.CelExpressionsV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,23 +21,23 @@ Create a Cel Expression.
 
 
 ```python
-import openapi_client
-from openapi_client.models.cel_expression_schema import CelExpressionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.cel_expression_schema import CelExpressionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CelExpressionsV5betaApi(api_client)
-    cel_expression_schema = openapi_client.CelExpressionSchema() # CelExpressionSchema |  (optional)
+    api_instance = edc_client.CelExpressionsV5betaApi(api_client)
+    cel_expression_schema = edc_client.CelExpressionSchema() # CelExpressionSchema |  (optional)
 
     try:
         api_instance.create_expression_v5(cel_expression_schema=cel_expression_schema)
@@ -87,22 +87,22 @@ Delete an Expression by ID.
 
 
 ```python
-import openapi_client
-from openapi_client.models.cel_expression_schema import CelExpressionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.cel_expression_schema import CelExpressionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CelExpressionsV5betaApi(api_client)
+    api_instance = edc_client.CelExpressionsV5betaApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -155,22 +155,22 @@ Gets an Expression by ID.
 
 
 ```python
-import openapi_client
-from openapi_client.models.cel_expression_schema import CelExpressionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.cel_expression_schema import CelExpressionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CelExpressionsV5betaApi(api_client)
+    api_instance = edc_client.CelExpressionsV5betaApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -223,24 +223,24 @@ Returns all cel expressions according to a query
 
 
 ```python
-import openapi_client
-from openapi_client.models.cel_expression_schema import CelExpressionSchema
-from openapi_client.models.query_spec_schema import QuerySpecSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.cel_expression_schema import CelExpressionSchema
+from edc_client.models.query_spec_schema import QuerySpecSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CelExpressionsV5betaApi(api_client)
-    query_spec_schema = openapi_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
+    api_instance = edc_client.CelExpressionsV5betaApi(api_client)
+    query_spec_schema = edc_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
 
     try:
         api_response = api_instance.query_expression_v5(query_spec_schema=query_spec_schema)
@@ -290,24 +290,24 @@ Test a Cel Expression.
 
 
 ```python
-import openapi_client
-from openapi_client.models.cel_expression_test_request_schema import CelExpressionTestRequestSchema
-from openapi_client.models.cel_expression_test_response_schema import CelExpressionTestResponseSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.cel_expression_test_request_schema import CelExpressionTestRequestSchema
+from edc_client.models.cel_expression_test_response_schema import CelExpressionTestResponseSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CelExpressionsV5betaApi(api_client)
-    cel_expression_test_request_schema = openapi_client.CelExpressionTestRequestSchema() # CelExpressionTestRequestSchema |  (optional)
+    api_instance = edc_client.CelExpressionsV5betaApi(api_client)
+    cel_expression_test_request_schema = edc_client.CelExpressionTestRequestSchema() # CelExpressionTestRequestSchema |  (optional)
 
     try:
         api_response = api_instance.test_expression_v5(cel_expression_test_request_schema=cel_expression_test_request_schema)
@@ -358,25 +358,25 @@ Update an Expression.
 
 
 ```python
-import openapi_client
-from openapi_client.models.cel_expression_schema import CelExpressionSchema
-from openapi_client.models.update_expression_v5_request import UpdateExpressionV5Request
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.cel_expression_schema import CelExpressionSchema
+from edc_client.models.update_expression_v5_request import UpdateExpressionV5Request
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CelExpressionsV5betaApi(api_client)
+    api_instance = edc_client.CelExpressionsV5betaApi(api_client)
     id = 'id_example' # str | 
-    update_expression_v5_request = openapi_client.UpdateExpressionV5Request() # UpdateExpressionV5Request |  (optional)
+    update_expression_v5_request = edc_client.UpdateExpressionV5Request() # UpdateExpressionV5Request |  (optional)
 
     try:
         api_response = api_instance.update_expression_v5(id, update_expression_v5_request=update_expression_v5_request)

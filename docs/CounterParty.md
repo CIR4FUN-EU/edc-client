@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.counter_party import CounterParty
+from edc_client.models.counter_party import CounterParty
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.offer import Offer
+from edc_client.models.offer import Offer
 
 # TODO update the JSON string below
 json = "{}"

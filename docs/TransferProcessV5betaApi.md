@@ -1,4 +1,4 @@
-# openapi_client.TransferProcessV5betaApi
+# edc_client.TransferProcessV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,22 +22,22 @@ Gets the state of a transfer process with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.transfer_state import TransferState
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.transfer_state import TransferState
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -91,22 +91,22 @@ Gets an transfer process with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.transfer_process_schema import TransferProcessSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.transfer_process_schema import TransferProcessSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -160,25 +160,25 @@ Initiates a data transfer with the given parameters. Due to the asynchronous nat
 
 
 ```python
-import openapi_client
-from openapi_client.models.id_response_schema import IdResponseSchema
-from openapi_client.models.transfer_request_schema import TransferRequestSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.id_response_schema import IdResponseSchema
+from edc_client.models.transfer_request_schema import TransferRequestSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    transfer_request_schema = openapi_client.TransferRequestSchema() # TransferRequestSchema |  (optional)
+    transfer_request_schema = edc_client.TransferRequestSchema() # TransferRequestSchema |  (optional)
 
     try:
         api_response = api_instance.initiate_transfer_process_v5(participant_context_id, transfer_request_schema=transfer_request_schema)
@@ -229,25 +229,25 @@ Returns all transfer process according to a query
 
 
 ```python
-import openapi_client
-from openapi_client.models.query_spec_schema import QuerySpecSchema
-from openapi_client.models.transfer_process_schema import TransferProcessSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.query_spec_schema import QuerySpecSchema
+from edc_client.models.transfer_process_schema import TransferProcessSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    query_spec_schema = openapi_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
+    query_spec_schema = edc_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
 
     try:
         api_response = api_instance.query_transfer_processes_v5(participant_context_id, query_spec_schema=query_spec_schema)
@@ -298,21 +298,21 @@ Requests the resumption of a suspended transfer process. Due to the asynchronous
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -364,25 +364,25 @@ Requests the suspension of a transfer process. Due to the asynchronous nature of
 
 
 ```python
-import openapi_client
-from openapi_client.models.transfer_suspend_schema import TransferSuspendSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.transfer_suspend_schema import TransferSuspendSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
-    transfer_suspend_schema = openapi_client.TransferSuspendSchema() # TransferSuspendSchema |  (optional)
+    transfer_suspend_schema = edc_client.TransferSuspendSchema() # TransferSuspendSchema |  (optional)
 
     try:
         api_instance.suspend_transfer_process_v5(participant_context_id, id, transfer_suspend_schema=transfer_suspend_schema)
@@ -434,25 +434,25 @@ Requests the termination of a transfer process. Due to the asynchronous nature o
 
 
 ```python
-import openapi_client
-from openapi_client.models.transfer_terminate_schema import TransferTerminateSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.transfer_terminate_schema import TransferTerminateSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TransferProcessV5betaApi(api_client)
+    api_instance = edc_client.TransferProcessV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
-    transfer_terminate_schema = openapi_client.TransferTerminateSchema() # TransferTerminateSchema |  (optional)
+    transfer_terminate_schema = edc_client.TransferTerminateSchema() # TransferTerminateSchema |  (optional)
 
     try:
         api_instance.terminate_transfer_process_v5(participant_context_id, id, transfer_terminate_schema=transfer_terminate_schema)

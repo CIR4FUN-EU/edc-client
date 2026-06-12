@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.participant_context import ParticipantContext
+from edc_client.models.participant_context import ParticipantContext
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.distribution_access_service import DistributionAccessService
+from edc_client.models.distribution_access_service import DistributionAccessService
 
 # TODO update the JSON string below
 json = "{}"

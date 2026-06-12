@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.discovery_response_schema import DiscoveryResponseSchema
+from edc_client.models.discovery_response_schema import DiscoveryResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

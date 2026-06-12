@@ -1,4 +1,4 @@
-# openapi_client.PolicyDefinitionV5betaApi
+# edc_client.PolicyDefinitionV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,26 +22,26 @@ Creates an execution plane for an existing Policy, If the Policy is not found, a
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_evaluation_plan_request_schema import PolicyEvaluationPlanRequestSchema
-from openapi_client.models.policy_evaluation_plan_schema import PolicyEvaluationPlanSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_evaluation_plan_request_schema import PolicyEvaluationPlanRequestSchema
+from edc_client.models.policy_evaluation_plan_schema import PolicyEvaluationPlanSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
-    policy_evaluation_plan_request_schema = openapi_client.PolicyEvaluationPlanRequestSchema() # PolicyEvaluationPlanRequestSchema |  (optional)
+    policy_evaluation_plan_request_schema = edc_client.PolicyEvaluationPlanRequestSchema() # PolicyEvaluationPlanRequestSchema |  (optional)
 
     try:
         api_response = api_instance.create_execution_plan_v5(participant_context_id, id, policy_evaluation_plan_request_schema=policy_evaluation_plan_request_schema)
@@ -93,25 +93,25 @@ Creates a new policy definition
 
 
 ```python
-import openapi_client
-from openapi_client.models.id_response_schema import IdResponseSchema
-from openapi_client.models.policy_definition_schema import PolicyDefinitionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.id_response_schema import IdResponseSchema
+from edc_client.models.policy_definition_schema import PolicyDefinitionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    policy_definition_schema = openapi_client.PolicyDefinitionSchema() # PolicyDefinitionSchema |  (optional)
+    policy_definition_schema = edc_client.PolicyDefinitionSchema() # PolicyDefinitionSchema |  (optional)
 
     try:
         api_response = api_instance.create_policy_definition_v5(participant_context_id, policy_definition_schema=policy_definition_schema)
@@ -163,21 +163,21 @@ Removes a policy definition with the given ID if possible. Deleting a policy def
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -230,22 +230,22 @@ Gets a policy definition with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_definition_schema import PolicyDefinitionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_definition_schema import PolicyDefinitionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -299,25 +299,25 @@ Returns all policy definitions according to a query
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_definition_schema import PolicyDefinitionSchema
-from openapi_client.models.query_spec_schema import QuerySpecSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_definition_schema import PolicyDefinitionSchema
+from edc_client.models.query_spec_schema import QuerySpecSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    query_spec_schema = openapi_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
+    query_spec_schema = edc_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
 
     try:
         api_response = api_instance.query_policy_definitions_v5(participant_context_id, query_spec_schema=query_spec_schema)
@@ -368,25 +368,25 @@ Updates an existing Policy, If the Policy is not found, an error is reported
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_definition_schema import PolicyDefinitionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_definition_schema import PolicyDefinitionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
-    policy_definition_schema = openapi_client.PolicyDefinitionSchema() # PolicyDefinitionSchema |  (optional)
+    policy_definition_schema = edc_client.PolicyDefinitionSchema() # PolicyDefinitionSchema |  (optional)
 
     try:
         api_instance.update_policy_definition_v5(participant_context_id, id, policy_definition_schema=policy_definition_schema)
@@ -437,22 +437,22 @@ Validates an existing Policy, If the Policy is not found, an error is reported
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_validation_result_schema import PolicyValidationResultSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_validation_result_schema import PolicyValidationResultSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV5betaApi(api_client)
+    api_instance = edc_client.PolicyDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 

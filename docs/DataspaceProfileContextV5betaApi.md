@@ -1,4 +1,4 @@
-# openapi_client.DataspaceProfileContextV5betaApi
+# edc_client.DataspaceProfileContextV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,25 +17,25 @@ Associate Dataspace Profile contexts to a participant context.
 
 
 ```python
-import openapi_client
-from openapi_client.models.dataspace_profile_schema import DataspaceProfileSchema
-from openapi_client.models.update_expression_v5_request import UpdateExpressionV5Request
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.dataspace_profile_schema import DataspaceProfileSchema
+from edc_client.models.update_expression_v5_request import UpdateExpressionV5Request
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataspaceProfileContextV5betaApi(api_client)
+    api_instance = edc_client.DataspaceProfileContextV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    update_expression_v5_request = openapi_client.UpdateExpressionV5Request() # UpdateExpressionV5Request |  (optional)
+    update_expression_v5_request = edc_client.UpdateExpressionV5Request() # UpdateExpressionV5Request |  (optional)
 
     try:
         api_response = api_instance.associate_profiles(participant_context_id, update_expression_v5_request=update_expression_v5_request)
@@ -88,22 +88,22 @@ Gets Dataspace Profile contexts configured for the participant context id.
 
 
 ```python
-import openapi_client
-from openapi_client.models.dataspace_profile_schema import DataspaceProfileSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.dataspace_profile_schema import DataspaceProfileSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataspaceProfileContextV5betaApi(api_client)
+    api_instance = edc_client.DataspaceProfileContextV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
 
     try:

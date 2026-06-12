@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.asset_schema import AssetSchema
+from edc_client.models.asset_schema import AssetSchema
 
 # TODO update the JSON string below
 json = "{}"

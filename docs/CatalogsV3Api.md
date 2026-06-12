@@ -1,4 +1,4 @@
-# openapi_client.CatalogsV3Api
+# edc_client.CatalogsV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -16,24 +16,24 @@ Obtains all catalogs currently held by this cache instance
 
 
 ```python
-import openapi_client
-from openapi_client.models.query_spec import QuerySpec
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.query_spec import QuerySpec
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogsV3Api(api_client)
+    api_instance = edc_client.CatalogsV3Api(api_client)
     flatten = False # bool |  (optional) (default to False)
-    query_spec = openapi_client.QuerySpec() # QuerySpec |  (optional)
+    query_spec = edc_client.QuerySpec() # QuerySpec |  (optional)
 
     try:
         api_response = api_instance.request_catalogs_v3(flatten=flatten, query_spec=query_spec)

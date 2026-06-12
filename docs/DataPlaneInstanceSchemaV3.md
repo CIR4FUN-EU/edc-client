@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_plane_instance_schema_v3 import DataPlaneInstanceSchemaV3
+from edc_client.models.data_plane_instance_schema_v3 import DataPlaneInstanceSchemaV3
 
 # TODO update the JSON string below
 json = "{}"

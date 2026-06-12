@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.criterion import Criterion
+from edc_client.models.criterion import Criterion
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transfer_terminate_schema import TransferTerminateSchema
+from edc_client.models.transfer_terminate_schema import TransferTerminateSchema
 
 # TODO update the JSON string below
 json = "{}"

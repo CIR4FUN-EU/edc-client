@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transfer_request_v3 import TransferRequestV3
+from edc_client.models.transfer_request_v3 import TransferRequestV3
 
 # TODO update the JSON string below
 json = "{}"

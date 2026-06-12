@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dataset_schema import DatasetSchema
+from edc_client.models.dataset_schema import DatasetSchema
 
 # TODO update the JSON string below
 json = "{}"

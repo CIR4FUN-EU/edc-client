@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.api_error_schema import ApiErrorSchema
+from edc_client.models.api_error_schema import ApiErrorSchema
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.AssetV5betaApi
+# edc_client.AssetV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,25 +20,25 @@ Creates a new asset together with a data address
 
 
 ```python
-import openapi_client
-from openapi_client.models.asset_schema import AssetSchema
-from openapi_client.models.id_response_schema import IdResponseSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.asset_schema import AssetSchema
+from edc_client.models.id_response_schema import IdResponseSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetV5betaApi(api_client)
+    api_instance = edc_client.AssetV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    asset_schema = openapi_client.AssetSchema() # AssetSchema |  (optional)
+    asset_schema = edc_client.AssetSchema() # AssetSchema |  (optional)
 
     try:
         api_response = api_instance.create_asset_v5(participant_context_id, asset_schema=asset_schema)
@@ -90,22 +90,22 @@ Gets an asset with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.asset_schema import AssetSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.asset_schema import AssetSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetV5betaApi(api_client)
+    api_instance = edc_client.AssetV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -159,25 +159,25 @@ Request all assets according to a particular query
 
 
 ```python
-import openapi_client
-from openapi_client.models.asset_schema import AssetSchema
-from openapi_client.models.query_spec_schema import QuerySpecSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.asset_schema import AssetSchema
+from edc_client.models.query_spec_schema import QuerySpecSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetV5betaApi(api_client)
+    api_instance = edc_client.AssetV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    query_spec_schema = openapi_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
+    query_spec_schema = edc_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
 
     try:
         api_response = api_instance.query_assets_v5(participant_context_id, query_spec_schema=query_spec_schema)
@@ -228,21 +228,21 @@ Removes an asset with the given ID if possible. Deleting an asset is only possib
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetV5betaApi(api_client)
+    api_instance = edc_client.AssetV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     asset_id = 'asset_id_example' # str | 
 
@@ -295,24 +295,24 @@ Updates an asset with the given ID if it exists. If the asset is not found, no f
 
 
 ```python
-import openapi_client
-from openapi_client.models.asset_schema import AssetSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.asset_schema import AssetSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetV5betaApi(api_client)
+    api_instance = edc_client.AssetV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    asset_schema = openapi_client.AssetSchema() # AssetSchema |  (optional)
+    asset_schema = edc_client.AssetSchema() # AssetSchema |  (optional)
 
     try:
         api_instance.update_asset_v5(participant_context_id, asset_schema=asset_schema)

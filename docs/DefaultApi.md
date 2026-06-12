@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# edc_client.DefaultApi
 
 All URIs are relative to *http://localhost*
 
@@ -15,21 +15,21 @@ Method | HTTP request | Description
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = edc_client.DefaultApi(api_client)
     flow_id = 'flow_id_example' # str | 
     resource_id = 'resource_id_example' # str | 
 
@@ -77,25 +77,25 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.models.provision_http_response import ProvisionHttpResponse
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.provision_http_response import ProvisionHttpResponse
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = edc_client.DefaultApi(api_client)
     flow_id = 'flow_id_example' # str | 
     resource_id = 'resource_id_example' # str | 
-    provision_http_response = openapi_client.ProvisionHttpResponse() # ProvisionHttpResponse |  (optional)
+    provision_http_response = edc_client.ProvisionHttpResponse() # ProvisionHttpResponse |  (optional)
 
     try:
         api_instance.provision(flow_id, resource_id, provision_http_response=provision_http_response)

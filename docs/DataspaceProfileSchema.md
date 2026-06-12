@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dataspace_profile_schema import DataspaceProfileSchema
+from edc_client.models.dataspace_profile_schema import DataspaceProfileSchema
 
 # TODO update the JSON string below
 json = "{}"

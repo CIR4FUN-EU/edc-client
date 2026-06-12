@@ -1,4 +1,4 @@
-# openapi_client.ContractDefinitionV5betaApi
+# edc_client.ContractDefinitionV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,25 +20,25 @@ Creates a new contract definition
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_definition_schema import ContractDefinitionSchema
-from openapi_client.models.id_response_schema import IdResponseSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_definition_schema import ContractDefinitionSchema
+from edc_client.models.id_response_schema import IdResponseSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractDefinitionV5betaApi(api_client)
+    api_instance = edc_client.ContractDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    contract_definition_schema = openapi_client.ContractDefinitionSchema() # ContractDefinitionSchema |  (optional)
+    contract_definition_schema = edc_client.ContractDefinitionSchema() # ContractDefinitionSchema |  (optional)
 
     try:
         api_response = api_instance.create_contract_definition_v5(participant_context_id, contract_definition_schema=contract_definition_schema)
@@ -90,21 +90,21 @@ Removes a contract definition with the given ID if possible. DANGER ZONE: Note t
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractDefinitionV5betaApi(api_client)
+    api_instance = edc_client.ContractDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -156,22 +156,22 @@ Gets an contract definition with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_definition_schema import ContractDefinitionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_definition_schema import ContractDefinitionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractDefinitionV5betaApi(api_client)
+    api_instance = edc_client.ContractDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     id = 'id_example' # str | 
 
@@ -225,25 +225,25 @@ Returns all contract definitions according to a query
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_definition_schema import ContractDefinitionSchema
-from openapi_client.models.query_spec_schema import QuerySpecSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_definition_schema import ContractDefinitionSchema
+from edc_client.models.query_spec_schema import QuerySpecSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractDefinitionV5betaApi(api_client)
+    api_instance = edc_client.ContractDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    query_spec_schema = openapi_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
+    query_spec_schema = edc_client.QuerySpecSchema() # QuerySpecSchema |  (optional)
 
     try:
         api_response = api_instance.query_contract_definitions_v5(participant_context_id, query_spec_schema=query_spec_schema)
@@ -294,24 +294,24 @@ Updated a contract definition with the given ID. The supplied JSON structure mus
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_definition_schema import ContractDefinitionSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_definition_schema import ContractDefinitionSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractDefinitionV5betaApi(api_client)
+    api_instance = edc_client.ContractDefinitionV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    contract_definition_schema = openapi_client.ContractDefinitionSchema() # ContractDefinitionSchema |  (optional)
+    contract_definition_schema = edc_client.ContractDefinitionSchema() # ContractDefinitionSchema |  (optional)
 
     try:
         api_instance.update_contract_definition_v5(participant_context_id, contract_definition_schema=contract_definition_schema)

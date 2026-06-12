@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.asset_properties import AssetProperties
+from edc_client.models.asset_properties import AssetProperties
 
 # TODO update the JSON string below
 json = "{}"

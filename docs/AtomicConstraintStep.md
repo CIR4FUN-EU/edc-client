@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.atomic_constraint_step import AtomicConstraintStep
+from edc_client.models.atomic_constraint_step import AtomicConstraintStep
 
 # TODO update the JSON string below
 json = "{}"

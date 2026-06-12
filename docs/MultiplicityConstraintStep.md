@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.multiplicity_constraint_step import MultiplicityConstraintStep
+from edc_client.models.multiplicity_constraint_step import MultiplicityConstraintStep
 
 # TODO update the JSON string below
 json = "{}"

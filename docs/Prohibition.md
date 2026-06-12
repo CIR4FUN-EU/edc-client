@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.prohibition import Prohibition
+from edc_client.models.prohibition import Prohibition
 
 # TODO update the JSON string below
 json = "{}"

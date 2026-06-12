@@ -1,4 +1,4 @@
-# openapi_client.ContractNegotiationV3Api
+# edc_client.ContractNegotiationV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -22,21 +22,21 @@ Deletes the contract negotiation with the given ID. Only terminated negotiations
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -87,22 +87,22 @@ Gets a contract agreement for a contract negotiation with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_agreement import ContractAgreement
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_agreement import ContractAgreement
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -154,22 +154,22 @@ Gets the state of a contract negotiation with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.negotiation_state import NegotiationState
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.negotiation_state import NegotiationState
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -221,22 +221,22 @@ Gets a contract negotiation with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_negotiation import ContractNegotiation
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_negotiation import ContractNegotiation
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -288,24 +288,24 @@ Initiates a contract negotiation for a given offer and with the given counter pa
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_request_v3 import ContractRequestV3
-from openapi_client.models.id_response import IdResponse
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_request_v3 import ContractRequestV3
+from edc_client.models.id_response import IdResponse
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
-    contract_request_v3 = openapi_client.ContractRequestV3() # ContractRequestV3 |  (optional)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
+    contract_request_v3 = edc_client.ContractRequestV3() # ContractRequestV3 |  (optional)
 
     try:
         api_response = api_instance.initiate_contract_negotiation_v3(contract_request_v3=contract_request_v3)
@@ -355,24 +355,24 @@ Returns all contract negotiations according to a query
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_negotiation import ContractNegotiation
-from openapi_client.models.query_spec import QuerySpec
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_negotiation import ContractNegotiation
+from edc_client.models.query_spec import QuerySpec
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
-    query_spec = openapi_client.QuerySpec() # QuerySpec |  (optional)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
+    query_spec = edc_client.QuerySpec() # QuerySpec |  (optional)
 
     try:
         api_response = api_instance.query_negotiations_v3(query_spec=query_spec)
@@ -422,24 +422,24 @@ Terminates the contract negotiation.
 
 
 ```python
-import openapi_client
-from openapi_client.models.terminate_negotiation_v3 import TerminateNegotiationV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.terminate_negotiation_v3 import TerminateNegotiationV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractNegotiationV3Api(api_client)
+    api_instance = edc_client.ContractNegotiationV3Api(api_client)
     id = 'id_example' # str | 
-    terminate_negotiation_v3 = openapi_client.TerminateNegotiationV3() # TerminateNegotiationV3 |  (optional)
+    terminate_negotiation_v3 = edc_client.TerminateNegotiationV3() # TerminateNegotiationV3 |  (optional)
 
     try:
         api_instance.terminate_negotiation_v3(id, terminate_negotiation_v3=terminate_negotiation_v3)

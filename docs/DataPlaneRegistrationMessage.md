@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_plane_registration_message import DataPlaneRegistrationMessage
+from edc_client.models.data_plane_registration_message import DataPlaneRegistrationMessage
 
 # TODO update the JSON string below
 json = "{}"

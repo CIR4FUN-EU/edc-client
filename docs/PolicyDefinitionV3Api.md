@@ -1,4 +1,4 @@
-# openapi_client.PolicyDefinitionV3Api
+# edc_client.PolicyDefinitionV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -22,24 +22,24 @@ Creates an execution plane for an existing Policy, If the Policy is not found, a
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_evaluation_plan_request_schema_v3 import PolicyEvaluationPlanRequestSchemaV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_evaluation_plan_request_schema_v3 import PolicyEvaluationPlanRequestSchemaV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
     id = 'id_example' # str | 
-    policy_evaluation_plan_request_schema_v3 = openapi_client.PolicyEvaluationPlanRequestSchemaV3() # PolicyEvaluationPlanRequestSchemaV3 |  (optional)
+    policy_evaluation_plan_request_schema_v3 = edc_client.PolicyEvaluationPlanRequestSchemaV3() # PolicyEvaluationPlanRequestSchemaV3 |  (optional)
 
     try:
         api_response = api_instance.create_execution_plane_v3(id, policy_evaluation_plan_request_schema_v3=policy_evaluation_plan_request_schema_v3)
@@ -90,24 +90,24 @@ Creates a new policy definition
 
 
 ```python
-import openapi_client
-from openapi_client.models.id_response import IdResponse
-from openapi_client.models.policy_definition_input_v3 import PolicyDefinitionInputV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.id_response import IdResponse
+from edc_client.models.policy_definition_input_v3 import PolicyDefinitionInputV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
-    policy_definition_input_v3 = openapi_client.PolicyDefinitionInputV3() # PolicyDefinitionInputV3 |  (optional)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
+    policy_definition_input_v3 = edc_client.PolicyDefinitionInputV3() # PolicyDefinitionInputV3 |  (optional)
 
     try:
         api_response = api_instance.create_policy_definition_v3(policy_definition_input_v3=policy_definition_input_v3)
@@ -158,21 +158,21 @@ Removes a policy definition with the given ID if possible. Deleting a policy def
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -223,22 +223,22 @@ Gets a policy definition with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_definition_output_v3 import PolicyDefinitionOutputV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_definition_output_v3 import PolicyDefinitionOutputV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -290,24 +290,24 @@ Returns all policy definitions according to a query
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_definition_output_v3 import PolicyDefinitionOutputV3
-from openapi_client.models.query_spec import QuerySpec
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_definition_output_v3 import PolicyDefinitionOutputV3
+from edc_client.models.query_spec import QuerySpec
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
-    query_spec = openapi_client.QuerySpec() # QuerySpec |  (optional)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
+    query_spec = edc_client.QuerySpec() # QuerySpec |  (optional)
 
     try:
         api_response = api_instance.query_policy_definitions_v3(query_spec=query_spec)
@@ -357,24 +357,24 @@ Updates an existing Policy, If the Policy is not found, an error is reported
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_definition_input_v3 import PolicyDefinitionInputV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_definition_input_v3 import PolicyDefinitionInputV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
     id = 'id_example' # str | 
-    policy_definition_input_v3 = openapi_client.PolicyDefinitionInputV3() # PolicyDefinitionInputV3 |  (optional)
+    policy_definition_input_v3 = edc_client.PolicyDefinitionInputV3() # PolicyDefinitionInputV3 |  (optional)
 
     try:
         api_instance.update_policy_definition_v3(id, policy_definition_input_v3=policy_definition_input_v3)
@@ -424,22 +424,22 @@ Validates an existing Policy, If the Policy is not found, an error is reported
 
 
 ```python
-import openapi_client
-from openapi_client.models.policy_validation_result_schema_v3 import PolicyValidationResultSchemaV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.policy_validation_result_schema_v3 import PolicyValidationResultSchemaV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PolicyDefinitionV3Api(api_client)
+    api_instance = edc_client.PolicyDefinitionV3Api(api_client)
     id = 'id_example' # str | 
 
     try:

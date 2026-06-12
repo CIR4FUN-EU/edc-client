@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cel_expression_test_request_right_operand import CelExpressionTestRequestRightOperand
+from edc_client.models.cel_expression_test_request_right_operand import CelExpressionTestRequestRightOperand
 
 # TODO update the JSON string below
 json = "{}"

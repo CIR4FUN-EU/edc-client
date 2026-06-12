@@ -1,0 +1,40 @@
+# flake8: noqa
+
+# import apis into api package
+from edc_client.api.asset_v3_api import AssetV3Api
+from edc_client.api.asset_v4_api import AssetV4Api
+from edc_client.api.asset_v5beta_api import AssetV5betaApi
+from edc_client.api.catalog_v3_api import CatalogV3Api
+from edc_client.api.catalog_v4_api import CatalogV4Api
+from edc_client.api.catalog_v5beta_api import CatalogV5betaApi
+from edc_client.api.catalogs_v3_api import CatalogsV3Api
+from edc_client.api.catalogs_v4_api import CatalogsV4Api
+from edc_client.api.cel_expressions_v5beta_api import CelExpressionsV5betaApi
+from edc_client.api.contract_agreement_v3_api import ContractAgreementV3Api
+from edc_client.api.contract_agreement_v4_api import ContractAgreementV4Api
+from edc_client.api.contract_agreement_v5beta_api import ContractAgreementV5betaApi
+from edc_client.api.contract_definition_v3_api import ContractDefinitionV3Api
+from edc_client.api.contract_definition_v4_api import ContractDefinitionV4Api
+from edc_client.api.contract_definition_v5beta_api import ContractDefinitionV5betaApi
+from edc_client.api.contract_negotiation_v3_api import ContractNegotiationV3Api
+from edc_client.api.contract_negotiation_v4_api import ContractNegotiationV4Api
+from edc_client.api.contract_negotiation_v5beta_api import ContractNegotiationV5betaApi
+from edc_client.api.dataplane_selector_v3_api import DataplaneSelectorV3Api
+from edc_client.api.dataplane_selector_v4_api import DataplaneSelectorV4Api
+from edc_client.api.dataplane_signaling_registration_v4_api import DataplaneSignalingRegistrationV4Api
+from edc_client.api.dataplane_signaling_registration_v5beta_api import DataplaneSignalingRegistrationV5betaApi
+from edc_client.api.dataspace_profile_context_v5beta_api import DataspaceProfileContextV5betaApi
+from edc_client.api.discovery_v5beta_api import DiscoveryV5betaApi
+from edc_client.api.edr_cache_v3_api import EDRCacheV3Api
+from edc_client.api.participant_context_config_v5beta_api import ParticipantContextConfigV5betaApi
+from edc_client.api.participant_context_v5beta_api import ParticipantContextV5betaApi
+from edc_client.api.policy_definition_v3_api import PolicyDefinitionV3Api
+from edc_client.api.policy_definition_v4_api import PolicyDefinitionV4Api
+from edc_client.api.policy_definition_v5beta_api import PolicyDefinitionV5betaApi
+from edc_client.api.secret_v3_api import SecretV3Api
+from edc_client.api.secret_v4_api import SecretV4Api
+from edc_client.api.transfer_process_v3_api import TransferProcessV3Api
+from edc_client.api.transfer_process_v4_api import TransferProcessV4Api
+from edc_client.api.transfer_process_v5beta_api import TransferProcessV5betaApi
+from edc_client.api.default_api import DefaultApi
+

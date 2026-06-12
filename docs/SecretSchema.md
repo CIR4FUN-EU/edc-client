@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.secret_schema import SecretSchema
+from edc_client.models.secret_schema import SecretSchema
 
 # TODO update the JSON string below
 json = "{}"

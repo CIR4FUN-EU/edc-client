@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transfer_process_v3 import TransferProcessV3
+from edc_client.models.transfer_process_v3 import TransferProcessV3
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.discovery_request_schema import DiscoveryRequestSchema
+from edc_client.models.discovery_request_schema import DiscoveryRequestSchema
 
 # TODO update the JSON string below
 json = "{}"

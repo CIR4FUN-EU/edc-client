@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.atomic_constraint import AtomicConstraint
+from edc_client.models.atomic_constraint import AtomicConstraint
 
 # TODO update the JSON string below
 json = "{}"

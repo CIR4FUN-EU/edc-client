@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.transfer_process import TransferProcess
+from edc_client.models.transfer_process import TransferProcess
 
 # TODO update the JSON string below
 json = "{}"

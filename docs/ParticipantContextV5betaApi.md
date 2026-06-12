@@ -1,4 +1,4 @@
-# openapi_client.ParticipantContextV5betaApi
+# edc_client.ParticipantContextV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,24 +20,24 @@ Creates a new ParticipantContext object.
 
 
 ```python
-import openapi_client
-from openapi_client.models.id_response_schema import IdResponseSchema
-from openapi_client.models.participant_context_schema import ParticipantContextSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.id_response_schema import IdResponseSchema
+from edc_client.models.participant_context_schema import ParticipantContextSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextV5betaApi(api_client)
-    participant_context_schema = openapi_client.ParticipantContextSchema() # ParticipantContextSchema |  (optional)
+    api_instance = edc_client.ParticipantContextV5betaApi(api_client)
+    participant_context_schema = edc_client.ParticipantContextSchema() # ParticipantContextSchema |  (optional)
 
     try:
         api_response = api_instance.create_participant_v5(participant_context_schema=participant_context_schema)
@@ -89,21 +89,21 @@ Delete a ParticipantContext.
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextV5betaApi(api_client)
+    api_instance = edc_client.ParticipantContextV5betaApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -154,22 +154,22 @@ Get all DID documents across all Participant Contexts. Requires elevated access.
 
 
 ```python
-import openapi_client
-from openapi_client.models.participant_context_schema import ParticipantContextSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.participant_context_schema import ParticipantContextSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextV5betaApi(api_client)
+    api_instance = edc_client.ParticipantContextV5betaApi(api_client)
     offset = 0 # int |  (optional) (default to 0)
     limit = 50 # int |  (optional) (default to 50)
 
@@ -223,22 +223,22 @@ Gets ParticipantContexts by ID.
 
 
 ```python
-import openapi_client
-from openapi_client.models.participant_context_schema import ParticipantContextSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.participant_context_schema import ParticipantContextSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextV5betaApi(api_client)
+    api_instance = edc_client.ParticipantContextV5betaApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -291,24 +291,24 @@ Updates a ParticipantContext object.
 
 
 ```python
-import openapi_client
-from openapi_client.models.participant_context_schema import ParticipantContextSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.participant_context_schema import ParticipantContextSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextV5betaApi(api_client)
+    api_instance = edc_client.ParticipantContextV5betaApi(api_client)
     id = 'id_example' # str | 
-    participant_context_schema = openapi_client.ParticipantContextSchema() # ParticipantContextSchema |  (optional)
+    participant_context_schema = edc_client.ParticipantContextSchema() # ParticipantContextSchema |  (optional)
 
     try:
         api_instance.update_participant_v5(id, participant_context_schema=participant_context_schema)

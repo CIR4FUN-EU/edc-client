@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.logical_constraint import LogicalConstraint
+from edc_client.models.logical_constraint import LogicalConstraint
 
 # TODO update the JSON string below
 json = "{}"

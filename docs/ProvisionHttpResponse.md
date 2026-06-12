@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.provision_http_response import ProvisionHttpResponse
+from edc_client.models.provision_http_response import ProvisionHttpResponse
 
 # TODO update the JSON string below
 json = "{}"

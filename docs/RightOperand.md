@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.right_operand import RightOperand
+from edc_client.models.right_operand import RightOperand
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.DataplaneSignalingRegistrationV4Api
+# edc_client.DataplaneSignalingRegistrationV4Api
 
 All URIs are relative to *http://localhost*
 
@@ -16,21 +16,21 @@ Delete a Dataplane instance
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataplaneSignalingRegistrationV4Api(api_client)
+    api_instance = edc_client.DataplaneSignalingRegistrationV4Api(api_client)
     dataplane_id = 'dataplane_id_example' # str | 
 
     try:

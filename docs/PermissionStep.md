@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.permission_step import PermissionStep
+from edc_client.models.permission_step import PermissionStep
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.duty_step import DutyStep
+from edc_client.models.duty_step import DutyStep
 
 # TODO update the JSON string below
 json = "{}"

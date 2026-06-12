@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.callback_address_schema import CallbackAddressSchema
+from edc_client.models.callback_address_schema import CallbackAddressSchema
 
 # TODO update the JSON string below
 json = "{}"

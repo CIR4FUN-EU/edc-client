@@ -1,4 +1,4 @@
-# openapi_client.CatalogV5betaApi
+# edc_client.CatalogV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -15,25 +15,25 @@ Method | HTTP request | Description
 
 
 ```python
-import openapi_client
-from openapi_client.models.catalog_request_schema import CatalogRequestSchema
-from openapi_client.models.dataset_schema import DatasetSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.catalog_request_schema import CatalogRequestSchema
+from edc_client.models.dataset_schema import DatasetSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogV5betaApi(api_client)
+    api_instance = edc_client.CatalogV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    catalog_request_schema = openapi_client.CatalogRequestSchema() # CatalogRequestSchema |  (optional)
+    catalog_request_schema = edc_client.CatalogRequestSchema() # CatalogRequestSchema |  (optional)
 
     try:
         api_response = api_instance.get_dataset_v5(participant_context_id, catalog_request_schema=catalog_request_schema)
@@ -81,25 +81,25 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.models.catalog_request_schema import CatalogRequestSchema
-from openapi_client.models.catalog_schema import CatalogSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.catalog_request_schema import CatalogRequestSchema
+from edc_client.models.catalog_schema import CatalogSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogV5betaApi(api_client)
+    api_instance = edc_client.CatalogV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    catalog_request_schema = openapi_client.CatalogRequestSchema() # CatalogRequestSchema |  (optional)
+    catalog_request_schema = edc_client.CatalogRequestSchema() # CatalogRequestSchema |  (optional)
 
     try:
         api_response = api_instance.request_catalog_v5(participant_context_id, catalog_request_schema=catalog_request_schema)

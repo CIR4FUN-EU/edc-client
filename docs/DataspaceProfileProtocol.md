@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dataspace_profile_protocol import DataspaceProfileProtocol
+from edc_client.models.dataspace_profile_protocol import DataspaceProfileProtocol
 
 # TODO update the JSON string below
 json = "{}"

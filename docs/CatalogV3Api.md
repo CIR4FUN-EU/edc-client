@@ -1,4 +1,4 @@
-# openapi_client.CatalogV3Api
+# edc_client.CatalogV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -15,23 +15,23 @@ Method | HTTP request | Description
 
 
 ```python
-import openapi_client
-from openapi_client.models.dataset_request_v3 import DatasetRequestV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.dataset_request_v3 import DatasetRequestV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogV3Api(api_client)
-    dataset_request_v3 = openapi_client.DatasetRequestV3() # DatasetRequestV3 |  (optional)
+    api_instance = edc_client.CatalogV3Api(api_client)
+    dataset_request_v3 = edc_client.DatasetRequestV3() # DatasetRequestV3 |  (optional)
 
     try:
         api_response = api_instance.get_dataset_v3(dataset_request_v3=dataset_request_v3)
@@ -78,23 +78,23 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.models.catalog_request_v3 import CatalogRequestV3
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.catalog_request_v3 import CatalogRequestV3
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CatalogV3Api(api_client)
-    catalog_request_v3 = openapi_client.CatalogRequestV3() # CatalogRequestV3 |  (optional)
+    api_instance = edc_client.CatalogV3Api(api_client)
+    catalog_request_v3 = edc_client.CatalogRequestV3() # CatalogRequestV3 |  (optional)
 
     try:
         api_response = api_instance.request_catalog_v3(catalog_request_v3=catalog_request_v3)

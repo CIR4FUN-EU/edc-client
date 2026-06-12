@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dataplane_metadata_schema import DataplaneMetadataSchema
+from edc_client.models.dataplane_metadata_schema import DataplaneMetadataSchema
 
 # TODO update the JSON string below
 json = "{}"

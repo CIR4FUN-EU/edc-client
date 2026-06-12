@@ -1,4 +1,4 @@
-# openapi_client.DataplaneSignalingRegistrationV5betaApi
+# edc_client.DataplaneSignalingRegistrationV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,21 +17,21 @@ Delete a Dataplane instance
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataplaneSignalingRegistrationV5betaApi(api_client)
+    api_instance = edc_client.DataplaneSignalingRegistrationV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
     dataplane_id = 'dataplane_id_example' # str | 
 
@@ -82,24 +82,24 @@ Register or update a Dataplane instance
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_plane_registration_message import DataPlaneRegistrationMessage
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.data_plane_registration_message import DataPlaneRegistrationMessage
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataplaneSignalingRegistrationV5betaApi(api_client)
+    api_instance = edc_client.DataplaneSignalingRegistrationV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    data_plane_registration_message = openapi_client.DataPlaneRegistrationMessage() # DataPlaneRegistrationMessage |  (optional)
+    data_plane_registration_message = edc_client.DataPlaneRegistrationMessage() # DataPlaneRegistrationMessage |  (optional)
 
     try:
         api_instance.register_v5(participant_context_id, data_plane_registration_message=data_plane_registration_message)

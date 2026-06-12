@@ -1,4 +1,4 @@
-# openapi_client.SecretV4Api
+# edc_client.SecretV4Api
 
 All URIs are relative to *http://localhost*
 
@@ -19,24 +19,24 @@ Creates a new secret.
 
 
 ```python
-import openapi_client
-from openapi_client.models.id_response_schema import IdResponseSchema
-from openapi_client.models.secret_schema import SecretSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.id_response_schema import IdResponseSchema
+from edc_client.models.secret_schema import SecretSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SecretV4Api(api_client)
-    secret_schema = openapi_client.SecretSchema() # SecretSchema |  (optional)
+    api_instance = edc_client.SecretV4Api(api_client)
+    secret_schema = edc_client.SecretSchema() # SecretSchema |  (optional)
 
     try:
         api_response = api_instance.create_secret_v4(secret_schema=secret_schema)
@@ -87,22 +87,22 @@ Gets a secret with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.secret_schema import SecretSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.secret_schema import SecretSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SecretV4Api(api_client)
+    api_instance = edc_client.SecretV4Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -154,21 +154,21 @@ Removes a secret with the given ID if possible.
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SecretV4Api(api_client)
+    api_instance = edc_client.SecretV4Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -218,23 +218,23 @@ Updates a secret with the given ID if it exists. If the secret is not found, no 
 
 
 ```python
-import openapi_client
-from openapi_client.models.secret_schema import SecretSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.secret_schema import SecretSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SecretV4Api(api_client)
-    secret_schema = openapi_client.SecretSchema() # SecretSchema |  (optional)
+    api_instance = edc_client.SecretV4Api(api_client)
+    secret_schema = edc_client.SecretSchema() # SecretSchema |  (optional)
 
     try:
         api_instance.update_secret_v4(secret_schema=secret_schema)

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.terminate_negotiation_v3 import TerminateNegotiationV3
+from edc_client.models.terminate_negotiation_v3 import TerminateNegotiationV3
 
 # TODO update the JSON string below
 json = "{}"

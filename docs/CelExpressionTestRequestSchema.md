@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cel_expression_test_request_schema import CelExpressionTestRequestSchema
+from edc_client.models.cel_expression_test_request_schema import CelExpressionTestRequestSchema
 
 # TODO update the JSON string below
 json = "{}"

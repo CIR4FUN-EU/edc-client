@@ -1,4 +1,4 @@
-# openapi_client.ParticipantContextConfigV5betaApi
+# edc_client.ParticipantContextConfigV5betaApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,22 +17,22 @@ Gets ParticipantContexts config by ID.
 
 
 ```python
-import openapi_client
-from openapi_client.models.participant_context_config_schema import ParticipantContextConfigSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.participant_context_config_schema import ParticipantContextConfigSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextConfigV5betaApi(api_client)
+    api_instance = edc_client.ParticipantContextConfigV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
 
     try:
@@ -85,24 +85,24 @@ Set ParticipantContext config.
 
 
 ```python
-import openapi_client
-from openapi_client.models.participant_context_config_schema import ParticipantContextConfigSchema
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.participant_context_config_schema import ParticipantContextConfigSchema
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ParticipantContextConfigV5betaApi(api_client)
+    api_instance = edc_client.ParticipantContextConfigV5betaApi(api_client)
     participant_context_id = 'participant_context_id_example' # str | 
-    participant_context_config_schema = openapi_client.ParticipantContextConfigSchema() # ParticipantContextConfigSchema |  (optional)
+    participant_context_config_schema = edc_client.ParticipantContextConfigSchema() # ParticipantContextConfigSchema |  (optional)
 
     try:
         api_instance.set_config_v5(participant_context_id, participant_context_config_schema=participant_context_config_schema)

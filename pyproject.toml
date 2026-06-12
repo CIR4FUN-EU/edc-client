@@ -1,5 +1,5 @@
 [project]
-name = "openapi_client"
+name = "edc_client"
 version = "1.0.0"
 description = "management-api"
 authors = [
@@ -41,7 +41,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "openapi_client",
+  "edc_client",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -79,7 +79,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "openapi_client.configuration",
+  "edc_client.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

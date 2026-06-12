@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_address import DataAddress
+from edc_client.models.data_address import DataAddress
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.endpoint_data_reference_entry_v3 import EndpointDataReferenceEntryV3
+from edc_client.models.endpoint_data_reference_entry_v3 import EndpointDataReferenceEntryV3
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.policy_definition_schema import PolicyDefinitionSchema
+from edc_client.models.policy_definition_schema import PolicyDefinitionSchema
 
 # TODO update the JSON string below
 json = "{}"

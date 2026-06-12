@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.xone_constraint_step import XoneConstraintStep
+from edc_client.models.xone_constraint_step import XoneConstraintStep
 
 # TODO update the JSON string below
 json = "{}"

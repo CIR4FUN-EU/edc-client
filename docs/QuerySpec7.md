@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.query_spec7 import QuerySpec7
+from edc_client.models.query_spec7 import QuerySpec7
 
 # TODO update the JSON string below
 json = "{}"

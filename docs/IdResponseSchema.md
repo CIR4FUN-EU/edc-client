@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.id_response_schema import IdResponseSchema
+from edc_client.models.id_response_schema import IdResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

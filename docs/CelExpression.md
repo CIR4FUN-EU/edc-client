@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cel_expression import CelExpression
+from edc_client.models.cel_expression import CelExpression
 
 # TODO update the JSON string below
 json = "{}"

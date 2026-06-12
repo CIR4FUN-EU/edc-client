@@ -1,4 +1,4 @@
-# openapi_client.ContractAgreementV3Api
+# edc_client.ContractAgreementV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -18,22 +18,22 @@ Gets an contract agreement with the given ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_agreement import ContractAgreement
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_agreement import ContractAgreement
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractAgreementV3Api(api_client)
+    api_instance = edc_client.ContractAgreementV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -85,22 +85,22 @@ Gets a contract negotiation with the given contract agreement ID
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_negotiation import ContractNegotiation
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_negotiation import ContractNegotiation
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractAgreementV3Api(api_client)
+    api_instance = edc_client.ContractAgreementV3Api(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -152,24 +152,24 @@ Gets all contract agreements according to a particular query
 
 
 ```python
-import openapi_client
-from openapi_client.models.contract_agreement1 import ContractAgreement1
-from openapi_client.models.query_spec import QuerySpec
-from openapi_client.rest import ApiException
+import edc_client
+from edc_client.models.contract_agreement1 import ContractAgreement1
+from edc_client.models.query_spec import QuerySpec
+from edc_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = edc_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with edc_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ContractAgreementV3Api(api_client)
-    query_spec = openapi_client.QuerySpec() # QuerySpec |  (optional)
+    api_instance = edc_client.ContractAgreementV3Api(api_client)
+    query_spec = edc_client.QuerySpec() # QuerySpec |  (optional)
 
     try:
         api_response = api_instance.query_agreements_v3(query_spec=query_spec)

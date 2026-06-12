@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.policy_validation_result import PolicyValidationResult
+from edc_client.models.policy_validation_result import PolicyValidationResult
 
 # TODO update the JSON string below
 json = "{}"

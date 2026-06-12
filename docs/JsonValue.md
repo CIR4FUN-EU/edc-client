@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.json_value import JsonValue
+from edc_client.models.json_value import JsonValue
 
 # TODO update the JSON string below
 json = "{}"

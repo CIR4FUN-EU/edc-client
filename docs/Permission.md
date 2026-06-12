@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.permission import Permission
+from edc_client.models.permission import Permission
 
 # TODO update the JSON string below
 json = "{}"

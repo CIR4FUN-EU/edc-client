@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.policy_evaluation_plan_request import PolicyEvaluationPlanRequest
+from edc_client.models.policy_evaluation_plan_request import PolicyEvaluationPlanRequest
 
 # TODO update the JSON string below
 json = "{}"

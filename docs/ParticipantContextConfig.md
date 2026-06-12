@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.participant_context_config import ParticipantContextConfig
+from edc_client.models.participant_context_config import ParticipantContextConfig
 
 # TODO update the JSON string below
 json = "{}"

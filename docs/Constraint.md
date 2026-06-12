@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.constraint import Constraint
+from edc_client.models.constraint import Constraint
 
 # TODO update the JSON string below
 json = "{}"
