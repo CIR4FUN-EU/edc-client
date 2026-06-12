@@ -15,12 +15,10 @@ Python 3.10+
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
-
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://gitlab.cc-asp.fraunhofer.de/digital-product-passport-sdk/edc-client
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://gitlab.cc-asp.fraunhofer.de/digital-product-passport-sdk/edc-client`)
 
 Then import the package:
 ```python
@@ -394,6 +392,6 @@ Endpoints do not require authorization.
 
 ## Author
 
-
+[OpenAPI Generator](https://openapi-generator.tech)
 
 
