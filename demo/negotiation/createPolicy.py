@@ -1,0 +1,26 @@
+import json
+import openapi_client
+from openapi_client.rest import ApiException
+
+configuration = openapi_client.Configuration(host="http://localhost:19193/management")
+
+policy_id = input("Enter a Policy ID: ").strip()
+
+with openapi_client.ApiClient(configuration) as client:
+    api = openapi_client.PolicyDefinitionV3Api(client)
+    body = openapi_client.PolicyDefinitionInputV3.from_dict({
+        "@context": {"@vocab": "https://w3id.org/edc/v0.0.1/ns/"},
+        "@id": policy_id,
+        "policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "@type": "Set",
+            "permission": [],
+            "prohibition": [],
+            "obligation": [],
+        },
+    })
+    try:
+        raw = api.create_policy_definition_v3_without_preload_content(policy_definition_input_v3=body)
+        print(json.dumps(json.loads(raw.data), indent=2))
+    except ApiException as e:
+        print(f"Error: {e.status} — {e.body}")
