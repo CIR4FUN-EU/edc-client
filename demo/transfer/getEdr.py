@@ -1,15 +1,22 @@
 import json
-import openapi_client
-from openapi_client.rest import ApiException
+import os
+import sys
 
-configuration = openapi_client.Configuration(host="http://localhost:29193/management")
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+import edc_client
+from dotenv import load_dotenv
+from demo_functions import get_edr, ApiException
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+CONSUMER_MANAGEMENT = os.environ["CONSUMER_MANAGEMENT"]
 
 tp_id = input("Paste the Transfer Process ID: ").strip()
 
-with openapi_client.ApiClient(configuration) as client:
-    api = openapi_client.EDRCacheV3Api(client)
+with edc_client.ApiClient(edc_client.Configuration(host=CONSUMER_MANAGEMENT)) as client:
     try:
-        edr = api.get_edr_entry_data_address_v3(tp_id)
+        edr = get_edr(client, tp_id)
         print(json.dumps(edr.model_dump(), indent=2, default=str))
     except ApiException as e:
         print(f"Error: {e.status} — {e.body}")

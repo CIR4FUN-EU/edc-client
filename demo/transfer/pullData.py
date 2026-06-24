@@ -1,9 +1,13 @@
 import json
-import httpx
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+from demo_functions import pull_data
 
 endpoint      = input("Paste the endpoint from the EDR: ").strip()
 authorization = input("Paste the authorization token from the EDR: ").strip()
 
-response = httpx.get(endpoint, headers={"Authorization": authorization})
-response.raise_for_status()
+response = pull_data(endpoint, authorization)
 print(json.dumps(response.json(), indent=2))

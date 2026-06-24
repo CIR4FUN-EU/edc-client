@@ -1,10 +1,19 @@
+import json
+import os
+import sys
 import time
-import openapi_client
-from openapi_client.rest import ApiException
 
-CONSUMER_MANAGEMENT = "http://localhost:29193/management"
-PROVIDER_PROTOCOL   = "http://localhost:19194/protocol/2025-1"
-PROVIDER_ID         = "connector-1"
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+import edc_client
+from dotenv import load_dotenv
+from demo_functions import negotiate, ApiException
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+CONSUMER_MANAGEMENT = os.environ["CONSUMER_MANAGEMENT"]
+PROVIDER_PROTOCOL   = os.environ["PROVIDER_PROTOCOL"]
+PROVIDER_ID         = os.environ["PROVIDER_ID"]
 
 POLL_INTERVAL = 2
 POLL_TIMEOUT  = 60
@@ -12,34 +21,16 @@ POLL_TIMEOUT  = 60
 offer_id = input("Paste the offer ID (odrl:hasPolicy @id from catalog): ").strip()
 asset_id = input("Enter the Asset ID: ").strip()
 
-configuration = openapi_client.Configuration(host=CONSUMER_MANAGEMENT)
-
-with openapi_client.ApiClient(configuration) as client:
-    neg_api = openapi_client.ContractNegotiationV3Api(client)
-
-    body = openapi_client.ContractRequestV3.from_dict({
-        "@context": {"@vocab": "https://w3id.org/edc/v0.0.1/ns/"},
-        "@type": "ContractRequest",
-        "counterPartyId": PROVIDER_ID,
-        "counterPartyAddress": PROVIDER_PROTOCOL,
-        "protocol": "dataspace-protocol-http:2025-1",
-        "policy": {
-            "@context": "http://www.w3.org/ns/odrl.jsonld",
-            "@id": offer_id,
-            "@type": "http://www.w3.org/ns/odrl/2/Offer",
-            "assigner": {"@id": PROVIDER_ID},
-            "target": {"@id": asset_id},
-        },
-    })
-
+with edc_client.ApiClient(edc_client.Configuration(host=CONSUMER_MANAGEMENT)) as client:
     try:
-        resp = neg_api.initiate_contract_negotiation_v3(contract_request_v3=body)
-        neg_id = resp.id
+        raw = negotiate(client, PROVIDER_ID, PROVIDER_PROTOCOL, offer_id, asset_id)
+        neg_id = json.loads(raw.data)["@id"]
         print(f"Negotiation started: {neg_id}")
     except ApiException as e:
         print(f"Error: {e.status} — {e.body}")
         exit(1)
 
+    neg_api = edc_client.ContractNegotiationV3Api(client)
     print("Polling for FINALIZED state...")
     deadline = time.time() + POLL_TIMEOUT
     while time.time() < deadline:

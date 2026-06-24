@@ -1,24 +1,23 @@
-import json
-import openapi_client
-from openapi_client.rest import ApiException
+import os
+import sys
 
-configuration = openapi_client.Configuration(host="http://localhost:29193/management")
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+import edc_client
+from dotenv import load_dotenv
+from demo_functions import start_pull, ApiException
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+CONSUMER_MANAGEMENT = os.environ["CONSUMER_MANAGEMENT"]
+PROVIDER_PROTOCOL   = os.environ["PROVIDER_PROTOCOL"]
+PROVIDER_ID         = os.environ["PROVIDER_ID"]
 
 agreement_id = input("Paste the Contract Agreement ID: ").strip()
 
-with openapi_client.ApiClient(configuration) as client:
-    api = openapi_client.TransferProcessV3Api(client)
-    body = openapi_client.TransferRequestV3.from_dict({
-        "@context": {"@vocab": "https://w3id.org/edc/v0.0.1/ns/"},
-        "@type": "TransferRequestDto",
-        "connectorId": "connector-1",
-        "counterPartyAddress": "http://localhost:19194/protocol/2025-1",
-        "contractId": agreement_id,
-        "protocol": "dataspace-protocol-http:2025-1",
-        "transferType": "HttpData-PULL",
-    })
+with edc_client.ApiClient(edc_client.Configuration(host=CONSUMER_MANAGEMENT)) as client:
     try:
-        resp = api.initiate_transfer_process_v3(transfer_request_v3=body)
-        print(f"Transfer Process ID: {resp.id}")
+        tp = start_pull(client, PROVIDER_ID, PROVIDER_PROTOCOL, agreement_id)
+        print(f"Transfer Process ID: {tp['@id']}")
     except ApiException as e:
         print(f"Error: {e.status} — {e.body}")

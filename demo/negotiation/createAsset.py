@@ -1,29 +1,23 @@
 import json
-import openapi_client
-from openapi_client.rest import ApiException
+import os
+import sys
 
-configuration = openapi_client.Configuration(host="http://localhost:19193/management")
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+import edc_client
+from dotenv import load_dotenv
+from demo_functions import create_asset, ApiException
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+PROVIDER_MANAGEMENT = os.environ["PROVIDER_MANAGEMENT"]
+BASE_URL = "https://jsonplaceholder.typicode.com/users"
 
 asset_id = input("Enter an Asset ID: ").strip()
 
-with openapi_client.ApiClient(configuration) as client:
-    api = openapi_client.AssetV3Api(client)
-    body = openapi_client.AssetInputV3.from_dict({
-        "@context": {"@vocab": "https://w3id.org/edc/v0.0.1/ns/"},
-        "@id": asset_id,
-        "properties": {
-            "name": "product description",
-            "contenttype": "application/json",
-        },
-        "dataAddress": {
-            "type": "HttpData",
-            "name": "Test asset",
-            "baseUrl": "https://jsonplaceholder.typicode.com/users",
-            "proxyPath": "true",
-        },
-    })
+with edc_client.ApiClient(edc_client.Configuration(host=PROVIDER_MANAGEMENT)) as client:
     try:
-        raw = api.create_asset_v3_without_preload_content(asset_input_v3=body)
-        print(json.dumps(json.loads(raw.data), indent=2))
+        response = create_asset(client, asset_id, BASE_URL, name="product description")
+        print(json.dumps(response, indent=2))
     except ApiException as e:
         print(f"Error: {e.status} — {e.body}")
