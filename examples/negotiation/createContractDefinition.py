@@ -4,11 +4,11 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from connector import connector, load_env, ApiException
+from examples.connector import example_connector, load_env, ApiException
 
 load_env()
 
-provider = connector("PROVIDER")
+provider = example_connector("PROVIDER")
 
 cd_id     = input("Enter a Contract Definition ID: ").strip()
 policy_id = input("Enter the Policy ID to use: ").strip()

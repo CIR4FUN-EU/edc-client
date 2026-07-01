@@ -3,14 +3,14 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from connector import connector, load_env, ApiException
+from examples.connector import example_connector, load_env, ApiException
 
 load_env()
 
 PUSH_DESTINATION_URL = os.environ["PUSH_DESTINATION_URL"]
 
-consumer = connector("CONSUMER")
-provider = connector("PROVIDER")
+consumer = example_connector("CONSUMER")
+provider = example_connector("PROVIDER")
 
 agreement_id = input("Paste the Contract Agreement ID: ").strip()
 

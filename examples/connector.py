@@ -307,7 +307,7 @@ def load_env() -> str:
     return flavor
 
 
-def connector(role: str) -> "Connector":
+def example_connector(role: str) -> "Connector":
     """Build a Connector for role 'PROVIDER' or 'CONSUMER' from env + the active flavor."""
     mgmt = os.environ[f"{role}_MANAGEMENT"]
     participant_id = os.environ[f"{role}_ID"]
@@ -315,3 +315,4 @@ def connector(role: str) -> "Connector":
     if active_flavor() == "construct_x":
         return Connector.construct_x(mgmt, participant_id, protocol_address, os.environ[f"{role}_API_KEY"])
     return Connector.samples(mgmt, participant_id, protocol_address)
+

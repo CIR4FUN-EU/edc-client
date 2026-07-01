@@ -4,12 +4,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from connector import connector, load_env, ApiException
+from examples.connector import example_connector, load_env, ApiException
 
 load_env()
 
-consumer = connector("CONSUMER")
-provider = connector("PROVIDER")
+consumer = example_connector("CONSUMER")
+provider = example_connector("PROVIDER")
 
 try:
     catalog = consumer.fetch_catalog(provider)

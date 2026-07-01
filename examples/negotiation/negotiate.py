@@ -5,15 +5,15 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from connector import connector, load_env, ApiException
+from examples.connector import example_connector, load_env, ApiException
 
 load_env()
 
 POLL_INTERVAL = 2
 POLL_TIMEOUT  = 60
 
-consumer = connector("CONSUMER")
-provider = connector("PROVIDER")
+consumer = example_connector("CONSUMER")
+provider = example_connector("PROVIDER")
 
 offer_id = input("Paste the offer ID (odrl:hasPolicy @id from catalog): ").strip()
 asset_id = input("Enter the Asset ID: ").strip()
