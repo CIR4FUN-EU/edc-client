@@ -14,7 +14,7 @@ import time
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from connector import connector, load_env
+from examples.connector import example_connector, load_env
 
 FLAVOR = load_env()
 
@@ -22,8 +22,8 @@ ASSET_ID        = "asset-1"
 POLICY_ID       = "policy-1"
 CONTRACT_DEF_ID = "contract-def-1"
 
-provider = connector("PROVIDER")
-consumer = connector("CONSUMER")
+provider = example_connector("PROVIDER")
+consumer = example_connector("CONSUMER")
 
 print(f"Flavor: {FLAVOR}")
 
