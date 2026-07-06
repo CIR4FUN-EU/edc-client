@@ -74,7 +74,7 @@ print(f"    transfer process ID: {tp_id}")
 # 5. poll transfer + pull data
 print("\n[5] Waiting for transfer to start...")
 while True:
-    state = consumer.get_transfer_state(tp_id).state
+    state = consumer.get_transfer_state(tp_id)["state"]
     print(f"    state: {state}")
     if state == "STARTED":
         endpoint, authorization = consumer.edr_endpoint_auth(consumer.get_edr(tp_id))
