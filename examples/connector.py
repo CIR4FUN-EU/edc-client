@@ -219,8 +219,10 @@ class Connector:
         return edc_client.TransferProcessV3Api(self.client).initiate_transfer_process_v3(transfer_request_v3=body)
 
     def get_transfer_state(self, transfer_process_id):
-        """Return the full transfer process model. Check .state (e.g. 'STARTED')."""
-        return edc_client.TransferProcessV3Api(self.client).get_transfer_process_v3(transfer_process_id)
+        """Return the full transfer process as a dict. Check ['state'] (e.g. 'STARTED')."""
+        raw = edc_client.TransferProcessV3Api(self.client).get_transfer_process_v3_without_preload_content(
+            transfer_process_id)
+        return json.loads(raw.data)
 
     def get_edr(self, transfer_process_id):
         """
@@ -285,7 +287,7 @@ class Connector:
 
         deadline = time.time() + poll_timeout
         while time.time() < deadline:
-            if self.get_transfer_state(tp_id).state == "STARTED":
+            if self.get_transfer_state(tp_id)["state"] == "STARTED":
                 endpoint, authorization = self.edr_endpoint_auth(self.get_edr(tp_id))
                 return self.pull_data(endpoint, authorization)
             time.sleep(poll_interval)
