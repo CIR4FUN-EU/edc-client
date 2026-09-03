@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.query_spec9 import QuerySpec9
+from edc_client.models.query_spec9 import QuerySpec9
 
 class TestQuerySpec9(unittest.TestCase):
     """QuerySpec9 unit test stubs"""

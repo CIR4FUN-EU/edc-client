@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.discovery_v5beta_api import DiscoveryV5betaApi
+from edc_client.api.discovery_v5beta_api import DiscoveryV5betaApi
 
 
 class TestDiscoveryV5betaApi(unittest.TestCase):

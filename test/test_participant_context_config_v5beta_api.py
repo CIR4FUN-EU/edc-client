@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.participant_context_config_v5beta_api import ParticipantContextConfigV5betaApi
+from edc_client.api.participant_context_config_v5beta_api import ParticipantContextConfigV5betaApi
 
 
 class TestParticipantContextConfigV5betaApi(unittest.TestCase):

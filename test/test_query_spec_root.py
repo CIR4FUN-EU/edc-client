@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.query_spec_root import QuerySpecRoot
+from edc_client.models.query_spec_root import QuerySpecRoot
 
 class TestQuerySpecRoot(unittest.TestCase):
     """QuerySpecRoot unit test stubs"""

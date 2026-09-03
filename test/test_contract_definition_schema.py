@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_definition_schema import ContractDefinitionSchema
+from edc_client.models.contract_definition_schema import ContractDefinitionSchema
 
 class TestContractDefinitionSchema(unittest.TestCase):
     """ContractDefinitionSchema unit test stubs"""
@@ -42,7 +42,7 @@ class TestContractDefinitionSchema(unittest.TestCase):
                 id = '',
                 access_policy_id = '',
                 contract_policy_id = '',
-                private_properties = openapi_client.models.private_properties.privateProperties(),
+                private_properties = edc_client.models.private_properties.privateProperties(),
                 assets_selector = [
                     {"operandRight":"","@type":"@type","operandLeft":"operandLeft","operator":"operator"}
                     ]

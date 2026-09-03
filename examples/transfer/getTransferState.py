@@ -19,9 +19,9 @@ print("Polling for STARTED state...")
 deadline = time.time() + POLL_TIMEOUT
 while time.time() < deadline:
     try:
-        tp = consumer.get_transfer_state(tp_id)
-        print(f"  state: {tp.state}")
-        if tp.state == "STARTED":
+        state = consumer.get_transfer_state(tp_id)["state"]
+        print(f"  state: {state}")
+        if state == "STARTED":
             print("Transfer is STARTED — you can now fetch the EDR.")
             break
     except ApiException as e:

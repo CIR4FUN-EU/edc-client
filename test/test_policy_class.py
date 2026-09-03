@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.policy_class import PolicyClass
+from edc_client.models.policy_class import PolicyClass
 
 class TestPolicyClass(unittest.TestCase):
     """PolicyClass unit test stubs"""

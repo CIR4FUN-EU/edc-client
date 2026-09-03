@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.policy_definition_schema import PolicyDefinitionSchema
+from edc_client.models.policy_definition_schema import PolicyDefinitionSchema
 
 class TestPolicyDefinitionSchema(unittest.TestCase):
     """PolicyDefinitionSchema unit test stubs"""

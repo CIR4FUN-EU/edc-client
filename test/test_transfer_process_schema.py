@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.transfer_process_schema import TransferProcessSchema
+from edc_client.models.transfer_process_schema import TransferProcessSchema
 
 class TestTransferProcessSchema(unittest.TestCase):
     """TransferProcessSchema unit test stubs"""

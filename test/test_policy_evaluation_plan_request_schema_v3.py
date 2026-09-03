@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.policy_evaluation_plan_request_schema_v3 import PolicyEvaluationPlanRequestSchemaV3
+from edc_client.models.policy_evaluation_plan_request_schema_v3 import PolicyEvaluationPlanRequestSchemaV3
 
 class TestPolicyEvaluationPlanRequestSchemaV3(unittest.TestCase):
     """PolicyEvaluationPlanRequestSchemaV3 unit test stubs"""

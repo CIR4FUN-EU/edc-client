@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.provision_http_response import ProvisionHttpResponse
+from edc_client.models.provision_http_response import ProvisionHttpResponse
 
 class TestProvisionHttpResponse(unittest.TestCase):
     """ProvisionHttpResponse unit test stubs"""

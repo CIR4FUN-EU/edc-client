@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.id_response1 import IdResponse1
+from edc_client.models.id_response1 import IdResponse1
 
 class TestIdResponse1(unittest.TestCase):
     """IdResponse1 unit test stubs"""

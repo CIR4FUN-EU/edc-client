@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.constraint import Constraint
+from edc_client.models.constraint import Constraint
 
 class TestConstraint(unittest.TestCase):
     """Constraint unit test stubs"""
@@ -36,16 +36,16 @@ class TestConstraint(unittest.TestCase):
         if include_optional:
             return Constraint(
                 var_and = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 and_sequence = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 var_or = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 xone = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 right_operand = None,
                 left_operand = '',

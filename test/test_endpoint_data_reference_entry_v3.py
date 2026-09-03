@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.endpoint_data_reference_entry_v3 import EndpointDataReferenceEntryV3
+from edc_client.models.endpoint_data_reference_entry_v3 import EndpointDataReferenceEntryV3
 
 class TestEndpointDataReferenceEntryV3(unittest.TestCase):
     """EndpointDataReferenceEntryV3 unit test stubs"""

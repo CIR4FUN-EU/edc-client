@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.update_expression_v5_request import UpdateExpressionV5Request
+from edc_client.models.update_expression_v5_request import UpdateExpressionV5Request
 
 class TestUpdateExpressionV5Request(unittest.TestCase):
     """UpdateExpressionV5Request unit test stubs"""

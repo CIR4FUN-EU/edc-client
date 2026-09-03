@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.dataplane_metadata import DataplaneMetadata
+from edc_client.models.dataplane_metadata import DataplaneMetadata
 
 class TestDataplaneMetadata(unittest.TestCase):
     """DataplaneMetadata unit test stubs"""

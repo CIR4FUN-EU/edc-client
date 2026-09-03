@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.and_constraint_step import AndConstraintStep
+from edc_client.models.and_constraint_step import AndConstraintStep
 
 class TestAndConstraintStep(unittest.TestCase):
     """AndConstraintStep unit test stubs"""

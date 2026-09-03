@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.participant_context_config import ParticipantContextConfig
+from edc_client.models.participant_context_config import ParticipantContextConfig
 
 class TestParticipantContextConfig(unittest.TestCase):
     """ParticipantContextConfig unit test stubs"""
@@ -39,8 +39,8 @@ class TestParticipantContextConfig(unittest.TestCase):
                     ''
                     ],
                 type = '',
-                entries = openapi_client.models.entries.entries(),
-                private_entries = openapi_client.models.private_entries.privateEntries()
+                entries = edc_client.models.entries.entries(),
+                private_entries = edc_client.models.private_entries.privateEntries()
             )
         else:
             return ParticipantContextConfig(
@@ -48,7 +48,7 @@ class TestParticipantContextConfig(unittest.TestCase):
                     ''
                     ],
                 type = '',
-                entries = openapi_client.models.entries.entries(),
+                entries = edc_client.models.entries.entries(),
         )
         """
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.data_service import DataService
+from edc_client.models.data_service import DataService
 
 class TestDataService(unittest.TestCase):
     """DataService unit test stubs"""
@@ -39,7 +39,7 @@ class TestDataService(unittest.TestCase):
                 type = '',
                 endpoint_url = '',
                 serves_dataset = [
-                    openapi_client.models.dataset.Dataset()
+                    edc_client.models.dataset.Dataset()
                     ]
             )
         else:

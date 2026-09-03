@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.offer_v3 import OfferV3
+from edc_client.models.offer_v3 import OfferV3
 
 class TestOfferV3(unittest.TestCase):
     """OfferV3 unit test stubs"""

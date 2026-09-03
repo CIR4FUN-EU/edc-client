@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.api_error_detail import ApiErrorDetail
+from edc_client.models.api_error_detail import ApiErrorDetail
 
 class TestApiErrorDetail(unittest.TestCase):
     """ApiErrorDetail unit test stubs"""

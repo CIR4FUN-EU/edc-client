@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.right_operand import RightOperand
+from edc_client.models.right_operand import RightOperand
 
 class TestRightOperand(unittest.TestCase):
     """RightOperand unit test stubs"""

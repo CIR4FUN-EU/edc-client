@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.data_address1 import DataAddress1
+from edc_client.models.data_address1 import DataAddress1
 
 class TestDataAddress1(unittest.TestCase):
     """DataAddress1 unit test stubs"""

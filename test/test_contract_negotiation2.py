@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_negotiation2 import ContractNegotiation2
+from edc_client.models.contract_negotiation2 import ContractNegotiation2
 
 class TestContractNegotiation2(unittest.TestCase):
     """ContractNegotiation2 unit test stubs"""
@@ -38,7 +38,7 @@ class TestContractNegotiation2(unittest.TestCase):
                 id = '',
                 type = 'https://w3id.org/edc/v0.0.1/ns/ContractNegotiation',
                 callback_addresses = [
-                    openapi_client.models.callback_address_1.CallbackAddress_1(
+                    edc_client.models.callback_address_1.CallbackAddress_1(
                         @type = 'https://w3id.org/edc/v0.0.1/ns/CallbackAddress', 
                         auth_code_id = '', 
                         auth_key = '', 

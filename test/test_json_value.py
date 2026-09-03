@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.json_value import JsonValue
+from edc_client.models.json_value import JsonValue
 
 class TestJsonValue(unittest.TestCase):
     """JsonValue unit test stubs"""
