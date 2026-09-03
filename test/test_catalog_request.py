@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.catalog_request import CatalogRequest
+from edc_client.models.catalog_request import CatalogRequest
 
 class TestCatalogRequest(unittest.TestCase):
     """CatalogRequest unit test stubs"""

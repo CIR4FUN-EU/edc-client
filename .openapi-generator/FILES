@@ -1,7 +1,5 @@
 .github/workflows/python.yml
 .gitignore
-.gitlab-ci.yml
-.travis.yml
 README.md
 docs/AbstractDataset.md
 docs/Agreement.md
@@ -386,11 +384,9 @@ edc_client/models/update_expression_v5_request.py
 edc_client/models/xone_constraint_step.py
 edc_client/py.typed
 edc_client/rest.py
-git_push.sh
 pyproject.toml
 requirements.txt
 setup.cfg
-setup.py
 test-requirements.txt
 test/__init__.py
 tox.ini

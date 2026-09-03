@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.distribution_access_service import DistributionAccessService
+from edc_client.models.distribution_access_service import DistributionAccessService
 
 class TestDistributionAccessService(unittest.TestCase):
     """DistributionAccessService unit test stubs"""
@@ -39,7 +39,7 @@ class TestDistributionAccessService(unittest.TestCase):
                 type = '',
                 endpoint_url = '',
                 serves_dataset = [
-                    openapi_client.models.dataset.Dataset()
+                    edc_client.models.dataset.Dataset()
                     ]
             )
         else:

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.secret_input_v3 import SecretInputV3
+from edc_client.models.secret_input_v3 import SecretInputV3
 
 class TestSecretInputV3(unittest.TestCase):
     """SecretInputV3 unit test stubs"""

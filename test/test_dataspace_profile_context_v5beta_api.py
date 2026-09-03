@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.dataspace_profile_context_v5beta_api import DataspaceProfileContextV5betaApi
+from edc_client.api.dataspace_profile_context_v5beta_api import DataspaceProfileContextV5betaApi
 
 
 class TestDataspaceProfileContextV5betaApi(unittest.TestCase):

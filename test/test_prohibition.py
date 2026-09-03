@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.prohibition import Prohibition
+from edc_client.models.prohibition import Prohibition
 
 class TestProhibition(unittest.TestCase):
     """Prohibition unit test stubs"""
@@ -37,7 +37,7 @@ class TestProhibition(unittest.TestCase):
             return Prohibition(
                 action = '',
                 constraint = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ]
             )
         else:

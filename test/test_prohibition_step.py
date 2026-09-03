@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.prohibition_step import ProhibitionStep
+from edc_client.models.prohibition_step import ProhibitionStep
 
 class TestProhibitionStep(unittest.TestCase):
     """ProhibitionStep unit test stubs"""

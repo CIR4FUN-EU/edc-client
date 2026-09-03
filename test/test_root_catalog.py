@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.root_catalog import RootCatalog
+from edc_client.models.root_catalog import RootCatalog
 
 class TestRootCatalog(unittest.TestCase):
     """RootCatalog unit test stubs"""
@@ -41,13 +41,13 @@ class TestRootCatalog(unittest.TestCase):
                     ],
                 type = '',
                 dataset = [
-                    openapi_client.models.dataset.Dataset()
+                    edc_client.models.dataset.Dataset()
                     ],
                 catalog = [
-                    openapi_client.models.catalog.Catalog()
+                    edc_client.models.catalog.Catalog()
                     ],
                 service = [
-                    openapi_client.models.data_service.DataService()
+                    edc_client.models.data_service.DataService()
                     ],
                 context = [
                     ''

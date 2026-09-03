@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.rule_step import RuleStep
+from edc_client.models.rule_step import RuleStep
 
 class TestRuleStep(unittest.TestCase):
     """RuleStep unit test stubs"""

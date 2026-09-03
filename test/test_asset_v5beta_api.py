@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.asset_v5beta_api import AssetV5betaApi
+from edc_client.api.asset_v5beta_api import AssetV5betaApi
 
 
 class TestAssetV5betaApi(unittest.TestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.or_constraint_step import OrConstraintStep
+from edc_client.models.or_constraint_step import OrConstraintStep
 
 class TestOrConstraintStep(unittest.TestCase):
     """OrConstraintStep unit test stubs"""

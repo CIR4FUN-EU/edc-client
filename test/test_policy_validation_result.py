@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.policy_validation_result import PolicyValidationResult
+from edc_client.models.policy_validation_result import PolicyValidationResult
 
 class TestPolicyValidationResult(unittest.TestCase):
     """PolicyValidationResult unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.participant_context import ParticipantContext
+from edc_client.models.participant_context import ParticipantContext
 
 class TestParticipantContext(unittest.TestCase):
     """ParticipantContext unit test stubs"""
@@ -41,7 +41,7 @@ class TestParticipantContext(unittest.TestCase):
                 type = '',
                 id = '',
                 identity = '',
-                properties = openapi_client.models.properties.properties(),
+                properties = edc_client.models.properties.properties(),
                 state = 'CREATED'
             )
         else:

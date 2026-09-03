@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.transfer_process_v4_api import TransferProcessV4Api
+from edc_client.api.transfer_process_v4_api import TransferProcessV4Api
 
 
 class TestTransferProcessV4Api(unittest.TestCase):

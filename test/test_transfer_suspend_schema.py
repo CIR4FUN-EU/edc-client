@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.transfer_suspend_schema import TransferSuspendSchema
+from edc_client.models.transfer_suspend_schema import TransferSuspendSchema
 
 class TestTransferSuspendSchema(unittest.TestCase):
     """TransferSuspendSchema unit test stubs"""

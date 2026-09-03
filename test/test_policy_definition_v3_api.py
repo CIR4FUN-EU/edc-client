@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.policy_definition_v3_api import PolicyDefinitionV3Api
+from edc_client.api.policy_definition_v3_api import PolicyDefinitionV3Api
 
 
 class TestPolicyDefinitionV3Api(unittest.TestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.message_offer import MessageOffer
+from edc_client.models.message_offer import MessageOffer
 
 class TestMessageOffer(unittest.TestCase):
     """MessageOffer unit test stubs"""

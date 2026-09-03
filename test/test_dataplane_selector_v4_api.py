@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.dataplane_selector_v4_api import DataplaneSelectorV4Api
+from edc_client.api.dataplane_selector_v4_api import DataplaneSelectorV4Api
 
 
 class TestDataplaneSelectorV4Api(unittest.TestCase):

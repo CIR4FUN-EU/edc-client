@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_definition_input_v3 import ContractDefinitionInputV3
+from edc_client.models.contract_definition_input_v3 import ContractDefinitionInputV3
 
 class TestContractDefinitionInputV3(unittest.TestCase):
     """ContractDefinitionInputV3 unit test stubs"""

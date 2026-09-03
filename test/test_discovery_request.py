@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.discovery_request import DiscoveryRequest
+from edc_client.models.discovery_request import DiscoveryRequest
 
 class TestDiscoveryRequest(unittest.TestCase):
     """DiscoveryRequest unit test stubs"""

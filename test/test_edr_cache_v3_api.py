@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.edr_cache_v3_api import EDRCacheV3Api
+from edc_client.api.edr_cache_v3_api import EDRCacheV3Api
 
 
 class TestEDRCacheV3Api(unittest.TestCase):
