@@ -63,9 +63,9 @@ with edc_client.ApiClient(configuration) as api_client:
 
 ## Reference
 
-- **[Runnable examples](examples/README.md)** — end-to-end flow and per-step
+- **[Runnable examples](https://github.com/CIR4FUN-EU/edc-client/blob/main/examples/README.md)** — end-to-end flow and per-step
   scripts for negotiation and transfer (the hand-written usage of this client).
-- **[API & model reference](docs/API_REFERENCE.md)** — full index of endpoint
+- **[API & model reference](https://github.com/CIR4FUN-EU/edc-client/blob/main/docs/API_REFERENCE.md)** — full index of endpoint
   classes and request/response models.
 
 <a id="documentation-for-authorization"></a>
@@ -76,6 +76,7 @@ Endpoints do not require authorization.
 
 ## Author
 
-[OpenAPI Generator](https://openapi-generator.tech)
+Enno Mueller — [CIR4FUN-EU/edc-client](https://github.com/CIR4FUN-EU/edc-client).
+Client code generated with the [OpenAPI Generator](https://openapi-generator.tech).
 
 
