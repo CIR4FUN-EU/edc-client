@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.operator import Operator
+from edc_client.models.operator import Operator
 
 class TestOperator(unittest.TestCase):
     """Operator unit test stubs"""

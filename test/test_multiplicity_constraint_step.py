@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.multiplicity_constraint_step import MultiplicityConstraintStep
+from edc_client.models.multiplicity_constraint_step import MultiplicityConstraintStep
 
 class TestMultiplicityConstraintStep(unittest.TestCase):
     """MultiplicityConstraintStep unit test stubs"""

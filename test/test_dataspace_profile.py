@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.dataspace_profile import DataspaceProfile
+from edc_client.models.dataspace_profile import DataspaceProfile
 
 class TestDataspaceProfile(unittest.TestCase):
     """DataspaceProfile unit test stubs"""

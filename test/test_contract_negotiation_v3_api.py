@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.contract_negotiation_v3_api import ContractNegotiationV3Api
+from edc_client.api.contract_negotiation_v3_api import ContractNegotiationV3Api
 
 
 class TestContractNegotiationV3Api(unittest.TestCase):

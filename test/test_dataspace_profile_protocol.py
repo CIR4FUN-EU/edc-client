@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.dataspace_profile_protocol import DataspaceProfileProtocol
+from edc_client.models.dataspace_profile_protocol import DataspaceProfileProtocol
 
 class TestDataspaceProfileProtocol(unittest.TestCase):
     """DataspaceProfileProtocol unit test stubs"""

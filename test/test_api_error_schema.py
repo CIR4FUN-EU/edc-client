@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.api_error_schema import ApiErrorSchema
+from edc_client.models.api_error_schema import ApiErrorSchema
 
 class TestApiErrorSchema(unittest.TestCase):
     """ApiErrorSchema unit test stubs"""

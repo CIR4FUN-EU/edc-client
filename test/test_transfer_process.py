@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.transfer_process import TransferProcess
+from edc_client.models.transfer_process import TransferProcess
 
 class TestTransferProcess(unittest.TestCase):
     """TransferProcess unit test stubs"""

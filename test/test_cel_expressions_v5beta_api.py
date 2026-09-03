@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.cel_expressions_v5beta_api import CelExpressionsV5betaApi
+from edc_client.api.cel_expressions_v5beta_api import CelExpressionsV5betaApi
 
 
 class TestCelExpressionsV5betaApi(unittest.TestCase):

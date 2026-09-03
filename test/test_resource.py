@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.resource import Resource
+from edc_client.models.resource import Resource
 
 class TestResource(unittest.TestCase):
     """Resource unit test stubs"""

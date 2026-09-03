@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.transfer_state import TransferState
+from edc_client.models.transfer_state import TransferState
 
 class TestTransferState(unittest.TestCase):
     """TransferState unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.distribution import Distribution
+from edc_client.models.distribution import Distribution
 
 class TestDistribution(unittest.TestCase):
     """Distribution unit test stubs"""

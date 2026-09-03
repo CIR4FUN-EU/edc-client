@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.policy_definition_output_v3 import PolicyDefinitionOutputV3
+from edc_client.models.policy_definition_output_v3 import PolicyDefinitionOutputV3
 
 class TestPolicyDefinitionOutputV3(unittest.TestCase):
     """PolicyDefinitionOutputV3 unit test stubs"""

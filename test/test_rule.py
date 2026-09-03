@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.rule import Rule
+from edc_client.models.rule import Rule
 
 class TestRule(unittest.TestCase):
     """Rule unit test stubs"""
@@ -37,7 +37,7 @@ class TestRule(unittest.TestCase):
             return Rule(
                 action = '',
                 constraint = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ]
             )
         else:

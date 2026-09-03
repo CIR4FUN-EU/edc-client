@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.criterion1 import Criterion1
+from edc_client.models.criterion1 import Criterion1
 
 class TestCriterion1(unittest.TestCase):
     """Criterion1 unit test stubs"""

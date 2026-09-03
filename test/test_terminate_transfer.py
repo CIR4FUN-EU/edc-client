@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.terminate_transfer import TerminateTransfer
+from edc_client.models.terminate_transfer import TerminateTransfer
 
 class TestTerminateTransfer(unittest.TestCase):
     """TerminateTransfer unit test stubs"""

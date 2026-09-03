@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.callback_address_schema import CallbackAddressSchema
+from edc_client.models.callback_address_schema import CallbackAddressSchema
 
 class TestCallbackAddressSchema(unittest.TestCase):
     """CallbackAddressSchema unit test stubs"""

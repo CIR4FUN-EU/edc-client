@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.cel_expression_test_response_schema import CelExpressionTestResponseSchema
+from edc_client.models.cel_expression_test_response_schema import CelExpressionTestResponseSchema
 
 class TestCelExpressionTestResponseSchema(unittest.TestCase):
     """CelExpressionTestResponseSchema unit test stubs"""

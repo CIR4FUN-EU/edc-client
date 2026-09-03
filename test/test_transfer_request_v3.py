@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.transfer_request_v3 import TransferRequestV3
+from edc_client.models.transfer_request_v3 import TransferRequestV3
 
 class TestTransferRequestV3(unittest.TestCase):
     """TransferRequestV3 unit test stubs"""
@@ -39,7 +39,7 @@ class TestTransferRequestV3(unittest.TestCase):
                 type = 'https://w3id.org/edc/v0.0.1/ns/TransferRequest',
                 asset_id = '',
                 callback_addresses = [
-                    openapi_client.models.callback_address_1.CallbackAddress_1(
+                    edc_client.models.callback_address_1.CallbackAddress_1(
                         @type = 'https://w3id.org/edc/v0.0.1/ns/CallbackAddress', 
                         auth_code_id = '', 
                         auth_key = '', 

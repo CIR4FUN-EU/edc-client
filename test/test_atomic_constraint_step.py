@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.atomic_constraint_step import AtomicConstraintStep
+from edc_client.models.atomic_constraint_step import AtomicConstraintStep
 
 class TestAtomicConstraintStep(unittest.TestCase):
     """AtomicConstraintStep unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_request_v3 import ContractRequestV3
+from edc_client.models.contract_request_v3 import ContractRequestV3
 
 class TestContractRequestV3(unittest.TestCase):
     """ContractRequestV3 unit test stubs"""
@@ -38,7 +38,7 @@ class TestContractRequestV3(unittest.TestCase):
                 context = None,
                 type = 'https://w3id.org/edc/v0.0.1/ns/ContractRequest',
                 callback_addresses = [
-                    openapi_client.models.callback_address_1.CallbackAddress_1(
+                    edc_client.models.callback_address_1.CallbackAddress_1(
                         @type = 'https://w3id.org/edc/v0.0.1/ns/CallbackAddress', 
                         auth_code_id = '', 
                         auth_key = '', 

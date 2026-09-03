@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.secret import Secret
+from edc_client.models.secret import Secret
 
 class TestSecret(unittest.TestCase):
     """Secret unit test stubs"""

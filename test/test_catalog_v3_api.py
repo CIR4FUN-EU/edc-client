@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.catalog_v3_api import CatalogV3Api
+from edc_client.api.catalog_v3_api import CatalogV3Api
 
 
 class TestCatalogV3Api(unittest.TestCase):

@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: edc_client Python package
+name: CI
 
 on: [push, pull_request]
 

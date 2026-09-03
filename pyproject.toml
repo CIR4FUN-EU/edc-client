@@ -1,13 +1,13 @@
 [project]
-name = "edc_client"
+name = "edc-client"
 version = "1.0.0"
-description = "management-api"
+description = "Python client for the EDC (Eclipse Dataspace Connector) management-api"
 authors = [
-  {name = "OpenAPI Generator Community",email = "team@openapitools.org"},
+  {name = "Enno Mueller"},
 ]
-license = { text = "The Apache License, Version 2.0" }
+license = { text = "Apache-2.0" }
 readme = "README.md"
-keywords = ["OpenAPI", "OpenAPI-Generator", "management-api"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "EDC", "management-api", "dataspace"]
 requires-python = ">=3.9"
 
 dependencies = [
@@ -18,7 +18,17 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+Homepage = "https://github.com/CIR4FUN-EU/edc-client"
+Repository = "https://github.com/CIR4FUN-EU/edc-client"
+Issues = "https://github.com/CIR4FUN-EU/edc-client/issues"
+
+# Ship only the edc_client package: keep the auto-generated test/ tree, the
+# examples/ package, and anything else at the project root out of the wheel.
+[tool.setuptools.packages.find]
+include = ["edc_client*"]
+
+[tool.setuptools.package-data]
+edc_client = ["py.typed"]
 
 [tool.poetry]
 requires-poetry = ">=2.0"

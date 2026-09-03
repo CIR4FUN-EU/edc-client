@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.asset_input_v3 import AssetInputV3
+from edc_client.models.asset_input_v3 import AssetInputV3
 
 class TestAssetInputV3(unittest.TestCase):
     """AssetInputV3 unit test stubs"""

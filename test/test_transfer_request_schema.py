@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.transfer_request_schema import TransferRequestSchema
+from edc_client.models.transfer_request_schema import TransferRequestSchema
 
 class TestTransferRequestSchema(unittest.TestCase):
     """TransferRequestSchema unit test stubs"""
@@ -45,7 +45,7 @@ class TestTransferRequestSchema(unittest.TestCase):
                 profile = '',
                 contract_id = '',
                 transfer_type = '',
-                private_properties = openapi_client.models.private_properties.privateProperties(),
+                private_properties = edc_client.models.private_properties.privateProperties(),
                 callback_addresses = [
                     {"authKey":"authKey","@type":"@type","authCodeId":"authCodeId","uri":"uri","transactional":true,"events":["events","events"]}
                     ],

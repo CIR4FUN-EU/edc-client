@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.catalog_schema import CatalogSchema
+from edc_client.models.catalog_schema import CatalogSchema
 
 class TestCatalogSchema(unittest.TestCase):
     """CatalogSchema unit test stubs"""
@@ -41,13 +41,13 @@ class TestCatalogSchema(unittest.TestCase):
                     ],
                 type = '',
                 dataset = [
-                    openapi_client.models.dataset.Dataset()
+                    edc_client.models.dataset.Dataset()
                     ],
                 catalog = [
-                    openapi_client.models.catalog.Catalog()
+                    edc_client.models.catalog.Catalog()
                     ],
                 service = [
-                    openapi_client.models.data_service.DataService()
+                    edc_client.models.data_service.DataService()
                     ],
                 context = [
                     ''

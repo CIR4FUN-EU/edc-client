@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_terminate_schema import ContractTerminateSchema
+from edc_client.models.contract_terminate_schema import ContractTerminateSchema
 
 class TestContractTerminateSchema(unittest.TestCase):
     """ContractTerminateSchema unit test stubs"""

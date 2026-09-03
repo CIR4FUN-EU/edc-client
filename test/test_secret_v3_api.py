@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.secret_v3_api import SecretV3Api
+from edc_client.api.secret_v3_api import SecretV3Api
 
 
 class TestSecretV3Api(unittest.TestCase):
