@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.root_dataset import RootDataset
+from edc_client.models.root_dataset import RootDataset
 
 class TestRootDataset(unittest.TestCase):
     """RootDataset unit test stubs"""

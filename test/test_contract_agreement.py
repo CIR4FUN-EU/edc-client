@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_agreement import ContractAgreement
+from edc_client.models.contract_agreement import ContractAgreement
 
 class TestContractAgreement(unittest.TestCase):
     """ContractAgreement unit test stubs"""

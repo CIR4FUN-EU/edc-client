@@ -16,23 +16,8 @@ Python 3.10+
 ### pip install
 
 ```sh
-pip install git+https://gitlab.cc-asp.fraunhofer.de/ipk-gfm/digital-product-passport-sdk/edc-client.git
+pip install edc-client
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://gitlab.cc-asp.fraunhofer.de/ipk-gfm/digital-product-passport-sdk/edc-client.git`)
-
-Then import the package:
-```python
-import edc_client
-```
-
-### Setuptools
-
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
-
-```sh
-python setup.py install --user
-```
-(or `sudo python setup.py install` to install the package for all users)
 
 Then import the package:
 ```python

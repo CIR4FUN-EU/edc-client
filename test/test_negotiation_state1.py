@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.negotiation_state1 import NegotiationState1
+from edc_client.models.negotiation_state1 import NegotiationState1
 
 class TestNegotiationState1(unittest.TestCase):
     """NegotiationState1 unit test stubs"""

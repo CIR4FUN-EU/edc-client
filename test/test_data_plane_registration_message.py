@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.data_plane_registration_message import DataPlaneRegistrationMessage
+from edc_client.models.data_plane_registration_message import DataPlaneRegistrationMessage
 
 class TestDataPlaneRegistrationMessage(unittest.TestCase):
     """DataPlaneRegistrationMessage unit test stubs"""

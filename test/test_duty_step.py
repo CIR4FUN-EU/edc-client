@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.duty_step import DutyStep
+from edc_client.models.duty_step import DutyStep
 
 class TestDutyStep(unittest.TestCase):
     """DutyStep unit test stubs"""

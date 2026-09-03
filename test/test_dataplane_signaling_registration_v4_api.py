@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.dataplane_signaling_registration_v4_api import DataplaneSignalingRegistrationV4Api
+from edc_client.api.dataplane_signaling_registration_v4_api import DataplaneSignalingRegistrationV4Api
 
 
 class TestDataplaneSignalingRegistrationV4Api(unittest.TestCase):

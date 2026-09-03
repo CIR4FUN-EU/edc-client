@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_request import ContractRequest
+from edc_client.models.contract_request import ContractRequest
 
 class TestContractRequest(unittest.TestCase):
     """ContractRequest unit test stubs"""
@@ -43,7 +43,7 @@ class TestContractRequest(unittest.TestCase):
                 counter_party_address = '',
                 protocol = '',
                 profile = '',
-                policy = openapi_client.models.contract_offer_schema.ContractOfferSchema(),
+                policy = edc_client.models.contract_offer_schema.ContractOfferSchema(),
                 callback_addresses = [
                     {"authKey":"authKey","@type":"@type","authCodeId":"authCodeId","uri":"uri","transactional":true,"events":["events","events"]}
                     ]
@@ -55,7 +55,7 @@ class TestContractRequest(unittest.TestCase):
                     ],
                 type = '',
                 counter_party_address = '',
-                policy = openapi_client.models.contract_offer_schema.ContractOfferSchema(),
+                policy = edc_client.models.contract_offer_schema.ContractOfferSchema(),
         )
         """
 

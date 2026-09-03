@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.contract_negotiation_schema import ContractNegotiationSchema
+from edc_client.models.contract_negotiation_schema import ContractNegotiationSchema
 
 class TestContractNegotiationSchema(unittest.TestCase):
     """ContractNegotiationSchema unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.dataset_request_v3 import DatasetRequestV3
+from edc_client.models.dataset_request_v3 import DatasetRequestV3
 
 class TestDatasetRequestV3(unittest.TestCase):
     """DatasetRequestV3 unit test stubs"""

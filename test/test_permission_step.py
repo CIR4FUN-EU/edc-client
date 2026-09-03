@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.permission_step import PermissionStep
+from edc_client.models.permission_step import PermissionStep
 
 class TestPermissionStep(unittest.TestCase):
     """PermissionStep unit test stubs"""

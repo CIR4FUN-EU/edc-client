@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.data_plane_instance_schema_v3 import DataPlaneInstanceSchemaV3
+from edc_client.models.data_plane_instance_schema_v3 import DataPlaneInstanceSchemaV3
 
 class TestDataPlaneInstanceSchemaV3(unittest.TestCase):
     """DataPlaneInstanceSchemaV3 unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.asset_v4_api import AssetV4Api
+from edc_client.api.asset_v4_api import AssetV4Api
 
 
 class TestAssetV4Api(unittest.TestCase):

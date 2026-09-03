@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.duty import Duty
+from edc_client.models.duty import Duty
 
 class TestDuty(unittest.TestCase):
     """Duty unit test stubs"""
@@ -37,7 +37,7 @@ class TestDuty(unittest.TestCase):
             return Duty(
                 action = '',
                 constraint = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ]
             )
         else:

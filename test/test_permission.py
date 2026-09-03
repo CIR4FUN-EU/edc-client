@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.permission import Permission
+from edc_client.models.permission import Permission
 
 class TestPermission(unittest.TestCase):
     """Permission unit test stubs"""
@@ -37,7 +37,7 @@ class TestPermission(unittest.TestCase):
             return Permission(
                 action = '',
                 constraint = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ]
             )
         else:

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.transfer_process_v5beta_api import TransferProcessV5betaApi
+from edc_client.api.transfer_process_v5beta_api import TransferProcessV5betaApi
 
 
 class TestTransferProcessV5betaApi(unittest.TestCase):

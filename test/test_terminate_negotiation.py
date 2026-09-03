@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.terminate_negotiation import TerminateNegotiation
+from edc_client.models.terminate_negotiation import TerminateNegotiation
 
 class TestTerminateNegotiation(unittest.TestCase):
     """TerminateNegotiation unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.logical_constraint import LogicalConstraint
+from edc_client.models.logical_constraint import LogicalConstraint
 
 class TestLogicalConstraint(unittest.TestCase):
     """LogicalConstraint unit test stubs"""
@@ -36,16 +36,16 @@ class TestLogicalConstraint(unittest.TestCase):
         if include_optional:
             return LogicalConstraint(
                 var_and = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 and_sequence = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 var_or = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ],
                 xone = [
-                    openapi_client.models.constraint.Constraint()
+                    edc_client.models.constraint.Constraint()
                     ]
             )
         else:

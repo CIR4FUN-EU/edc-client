@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.cel_expression_test_request_schema import CelExpressionTestRequestSchema
+from edc_client.models.cel_expression_test_request_schema import CelExpressionTestRequestSchema
 
 class TestCelExpressionTestRequestSchema(unittest.TestCase):
     """CelExpressionTestRequestSchema unit test stubs"""
@@ -43,7 +43,7 @@ class TestCelExpressionTestRequestSchema(unittest.TestCase):
                 left_operand = '',
                 operator = '',
                 right_operand = None,
-                params = openapi_client.models.params.params()
+                params = edc_client.models.params.params()
             )
         else:
             return CelExpressionTestRequestSchema(

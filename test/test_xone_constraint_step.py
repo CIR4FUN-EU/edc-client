@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.xone_constraint_step import XoneConstraintStep
+from edc_client.models.xone_constraint_step import XoneConstraintStep
 
 class TestXoneConstraintStep(unittest.TestCase):
     """XoneConstraintStep unit test stubs"""
