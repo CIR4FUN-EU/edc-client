@@ -314,7 +314,8 @@ def example_connector(role: str) -> "Connector":
     mgmt = os.environ[f"{role}_MANAGEMENT"]
     participant_id = os.environ[f"{role}_ID"]
     protocol_address = os.getenv(f"{role}_PROTOCOL", "")
-    if active_flavor() == "construct_x":
-        return Connector.construct_x(mgmt, participant_id, protocol_address, os.environ[f"{role}_API_KEY"])
+    api_key = os.getenv(f"{role}_API_KEY")
+    if active_flavor() == "construct_x" or api_key is not None:  # any env with a key = construct-x connector
+        return Connector.construct_x(mgmt, participant_id, protocol_address, api_key)
     return Connector.samples(mgmt, participant_id, protocol_address)
 

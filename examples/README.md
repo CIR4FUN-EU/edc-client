@@ -32,6 +32,7 @@ FLAVOR=construct_x python -m examples.full_flow # construct-x
 | -------------- | ------------------- | ----------------------- |
 | _(unset)_      | `.env`              | `Connector.samples()`   |
 | `construct_x`  | `.env.construct_x`  | `Connector.construct_x()` |
+| `ipk`          | `.env.ipk` | `Connector.construct_x()` — remote IPK connector-002 |
 
 ## Config
 
