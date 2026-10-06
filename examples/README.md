@@ -21,6 +21,25 @@ Override a single preset value with a keyword (`dsp_protocol=`, `asset_auth=`,
 `edr_remap=`). `Connector.from_env("PROVIDER")` builds one from `PROVIDER_*` env
 vars: API key set → `construct_x`, otherwise `samples`.
 
+### Minimal usage
+
+```python
+from edc_client.connector import Connector
+
+# one object per connector; the first argument is the type
+provider = Connector("construct_x", PROVIDER_MGMT_URL, PROVIDER_ID, PROVIDER_DSP_URL, PROVIDER_API_KEY)
+consumer = Connector("construct_x", CONSUMER_MGMT_URL, CONSUMER_ID, CONSUMER_DSP_URL, CONSUMER_API_KEY)
+
+# provider: offer some data
+provider.create_asset("asset-1", "https://jsonplaceholder.typicode.com/users")
+provider.create_policy("policy-1")
+provider.create_contract_definition("contract-def-1", "policy-1", "policy-1")
+
+# consumer: negotiate, transfer and fetch it in one call
+response = consumer.negotiate_and_transfer(provider, "asset-1")
+print(response.json())
+```
+
 ## Quick start
 
 Run as modules from the repo root (`-m`, dotted path — not a file path):
