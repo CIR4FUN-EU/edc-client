@@ -6,11 +6,17 @@ The connector type is picked at init — same code, different preset, no inherit
     consumer = Connector("construct_x", CONSUMER_MGMT, CONSUMER_ID, CONSUMER_PROTOCOL, API_KEY)
     provider.create_asset("asset-1", "https://example.org/data")
     catalog = consumer.fetch_catalog(provider)            # counterparty = a Connector
+
+A consumer without access to the provider's management API passes a Counterparty
+(just the two public DSP values) wherever a provider is expected:
+
+    provider = Counterparty(PROVIDER_ID, PROVIDER_PROTOCOL)
 """
 
 import json
 import os
 import time
+from collections import namedtuple
 
 import urllib3
 import edc_client
@@ -18,6 +24,10 @@ from edc_client.api_client import ApiClient
 from edc_client.rest import ApiException
 
 _EDC_CTX = {"@vocab": "https://w3id.org/edc/v0.0.1/ns/"}
+
+# A Counterparty object replaces a Connector object in methods where only 
+# participant_id and protocol_address of a connector is needed
+Counterparty = namedtuple("Counterparty", ["participant_id", "protocol_address"])
 
 _FLAVORS = {
     # EDC samples connector: DSP 2025-1, no management auth, no remap
@@ -141,7 +151,7 @@ class Connector:
         """Delete an asset. Fails with 409 if referenced by an agreement or active negotiation."""
         edc_client.AssetV3Api(self.client).remove_asset_v3(asset_id)
 
-    # --- consumer-side (counterparty passed as a provider Connector) ---
+    # --- consumer-side (provider = a Connector or a Counterparty) ---
 
     def fetch_catalog(self, provider):
         """Fetch the provider's catalog. Returns raw JSON-LD — datasets under 'dcat:dataset'."""

@@ -40,6 +40,16 @@ response = consumer.negotiate_and_transfer(provider, "asset-1")
 print(response.json())
 ```
 
+The consumer only needs the provider's public DSP id and address, not its management
+API. Without access to the provider's connector, pass a `Counterparty` instead:
+
+```python
+from edc_client.connector import Connector, Counterparty
+
+provider = Counterparty(PROVIDER_ID, PROVIDER_DSP_URL)
+response = consumer.negotiate_and_transfer(provider, "asset-1")
+```
+
 ## Quick start
 
 Run as modules from the repo root (`-m`, dotted path — not a file path):
