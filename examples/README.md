@@ -6,15 +6,20 @@ the full dataspace flow: catalog → negotiate → agreement → transfer → ED
 
 ## The `Connector` class
 
-[`connector.py`](connector.py) is a single config-driven client. The demo helpers
-(`create_asset`, `fetch_catalog`, `negotiate`, `start_pull`, `get_edr`,
-`pull_data`, …) are methods. Two **flavors** are just different config via
-classmethod presets — same code, no inheritance:
+`Connector` ships in the package — [`edc_client/connector.py`](../edc_client/connector.py),
+`from edc_client.connector import Connector` — as a single config-driven client. The
+helpers (`create_asset`, `fetch_catalog`, `negotiate`, `start_pull`, `get_edr`,
+`pull_data`, …) are methods. The connector **type** is the first constructor
+argument — same code, different preset, no inheritance:
 
-- `Connector.samples(mgmt, id, protocol)` — EDC samples connector: DSP `2025-1`,
+- `Connector("samples", mgmt, id, protocol)` — EDC samples connector: DSP `2025-1`,
   no management auth, no EDR remap.
-- `Connector.construct_x(mgmt, id, protocol, api_key)` — construct-x testbed:
+- `Connector("construct_x", mgmt, id, protocol, api_key)` — construct-x testbed:
   DSP `v08`, `x-api-key` auth, authed asset data addresses, EDR docker→host remap.
+
+Override a single preset value with a keyword (`dsp_protocol=`, `asset_auth=`,
+`edr_remap=`). `Connector.from_env("PROVIDER")` builds one from `PROVIDER_*` env
+vars: API key set → `construct_x`, otherwise `samples`.
 
 ## Quick start
 
@@ -25,14 +30,13 @@ python -m examples.full_flow                    # samples flavor (default)
 FLAVOR=construct_x python -m examples.full_flow # construct-x
 ```
 
-`FLAVOR` selects **both** the preset and the env file (via `load_env()` /
-`example_connector()` in [`connector.py`](connector.py)):
+`FLAVOR` selects the env file (`load_env()` in [`connector.py`](connector.py));
+the connector type follows from whether that file sets `*_API_KEY`:
 
-| FLAVOR         | env file            | preset                  |
-| -------------- | ------------------- | ----------------------- |
-| _(unset)_      | `.env`              | `Connector.samples()`   |
-| `construct_x`  | `.env.construct_x`  | `Connector.construct_x()` |
-| `ipk`          | `.env.ipk` | `Connector.construct_x()` — remote IPK connector-002 |
+| FLAVOR         | env file            | type            |
+| -------------- | ------------------- | --------------- |
+| _(unset)_      | `.env`              | `"samples"`     |
+| `construct_x`  | `.env.construct_x`  | `"construct_x"` |
 
 ## Config
 
