@@ -36,6 +36,13 @@ _FLAVORS = {
 }
 
 
+def _json(raw):
+    """Parse a *_without_preload_content response, raising ApiException on 4xx/5xx like the typed calls do."""
+    if raw.status >= 400:
+        raise ApiException(status=raw.status, reason=raw.reason, body=raw.data.decode())
+    return json.loads(raw.data)
+
+
 class Connector:
     def __init__(self, flavor, management_url, participant_id, protocol_address, api_key=None, **overrides):
         """
@@ -89,7 +96,7 @@ class Connector:
             },
         })
         raw = edc_client.AssetV3Api(self.client).create_asset_v3_without_preload_content(asset_input_v3=body)
-        return json.loads(raw.data)
+        return _json(raw)
 
     def create_policy(self, policy_id, *, permissions=None, prohibitions=None, obligations=None):
         """Create an ODRL policy definition. Empty lists = permissive (no constraints)."""
@@ -106,7 +113,7 @@ class Connector:
         })
         raw = edc_client.PolicyDefinitionV3Api(self.client).create_policy_definition_v3_without_preload_content(
             policy_definition_input_v3=body)
-        return json.loads(raw.data)
+        return _json(raw)
 
     def create_contract_definition(self, contract_definition_id, access_policy_id, contract_policy_id, *, assets_selector=None):
         """
@@ -123,12 +130,12 @@ class Connector:
         })
         raw = edc_client.ContractDefinitionV3Api(self.client).create_contract_definition_v3_without_preload_content(
             contract_definition_input_v3=body)
-        return json.loads(raw.data)
+        return _json(raw)
 
     def list_assets(self):
         """Return all assets registered on this connector."""
         raw = edc_client.AssetV3Api(self.client).request_assets_v3_without_preload_content()
-        return json.loads(raw.data)
+        return _json(raw)
 
     def remove_asset(self, asset_id):
         """Delete an asset. Fails with 409 if referenced by an agreement or active negotiation."""
@@ -199,7 +206,7 @@ class Connector:
         })
         raw = edc_client.TransferProcessV3Api(self.client).initiate_transfer_process_v3_without_preload_content(
             transfer_request_v3=body)
-        return json.loads(raw.data)
+        return _json(raw)
 
     def start_push(self, provider, agreement_id, push_destination_url):
         """Start an HttpData-PUSH transfer. The provider POSTs data to push_destination_url."""
@@ -219,7 +226,7 @@ class Connector:
         """Return the full transfer process as a dict. Check ['state'] (e.g. 'STARTED')."""
         raw = edc_client.TransferProcessV3Api(self.client).get_transfer_process_v3_without_preload_content(
             transfer_process_id)
-        return json.loads(raw.data)
+        return _json(raw)
 
     def get_edr(self, transfer_process_id):
         """
