@@ -6,15 +6,49 @@ the full dataspace flow: catalog → negotiate → agreement → transfer → ED
 
 ## The `Connector` class
 
-[`connector.py`](connector.py) is a single config-driven client. The demo helpers
-(`create_asset`, `fetch_catalog`, `negotiate`, `start_pull`, `get_edr`,
-`pull_data`, …) are methods. Two **flavors** are just different config via
-classmethod presets — same code, no inheritance:
+`Connector` ships in the package — [`edc_client/connector.py`](../edc_client/connector.py),
+`from edc_client.connector import Connector` — as a single config-driven client. The
+helpers (`create_asset`, `fetch_catalog`, `negotiate`, `start_pull`, `get_edr`,
+`pull_data`, …) are methods. The connector **type** is the first constructor
+argument — same code, different preset, no inheritance:
 
-- `Connector.samples(mgmt, id, protocol)` — EDC samples connector: DSP `2025-1`,
+- `Connector("samples", mgmt, id, protocol)` — EDC samples connector: DSP `2025-1`,
   no management auth, no EDR remap.
-- `Connector.construct_x(mgmt, id, protocol, api_key)` — construct-x testbed:
+- `Connector("construct_x", mgmt, id, protocol, api_key)` — construct-x testbed:
   DSP `v08`, `x-api-key` auth, authed asset data addresses, EDR docker→host remap.
+
+Override a single preset value with a keyword (`dsp_protocol=`, `asset_auth=`,
+`edr_remap=`). `Connector.from_env("PROVIDER")` builds one from `PROVIDER_*` env
+vars: API key set → `construct_x`, otherwise `samples`.
+
+### Minimal usage
+
+```python
+from edc_client.connector import Connector
+
+# one object per connector; the first argument is the type
+provider = Connector("construct_x", PROVIDER_MGMT_URL, PROVIDER_ID, PROVIDER_DSP_URL, PROVIDER_API_KEY)
+consumer = Connector("construct_x", CONSUMER_MGMT_URL, CONSUMER_ID, CONSUMER_DSP_URL, CONSUMER_API_KEY)
+
+# provider: offer some data
+provider.create_asset("asset-1", "https://jsonplaceholder.typicode.com/users")
+provider.create_policy("policy-1")
+provider.create_contract_definition("contract-def-1", "policy-1", "policy-1")
+
+# consumer: negotiate, transfer and fetch it in one call
+response = consumer.negotiate_and_transfer(provider, "asset-1")
+print(response.json())
+```
+
+The consumer only needs the provider's public DSP id and address, not its management
+API. Without access to the provider's connector, pass a `Counterparty` instead:
+
+```python
+from edc_client.connector import Connector, Counterparty
+
+provider = Counterparty(PROVIDER_ID, PROVIDER_DSP_URL)
+response = consumer.negotiate_and_transfer(provider, "asset-1")
+```
 
 ## Quick start
 
@@ -25,13 +59,13 @@ python -m examples.full_flow                    # samples flavor (default)
 FLAVOR=construct_x python -m examples.full_flow # construct-x
 ```
 
-`FLAVOR` selects **both** the preset and the env file (via `load_env()` /
-`example_connector()` in [`connector.py`](connector.py)):
+`FLAVOR` selects the env file (`load_env()` in [`connector.py`](connector.py));
+the connector type follows from whether that file sets `*_API_KEY`:
 
-| FLAVOR         | env file            | preset                  |
-| -------------- | ------------------- | ----------------------- |
-| _(unset)_      | `.env`              | `Connector.samples()`   |
-| `construct_x`  | `.env.construct_x`  | `Connector.construct_x()` |
+| FLAVOR         | env file            | type            |
+| -------------- | ------------------- | --------------- |
+| _(unset)_      | `.env`              | `"samples"`     |
+| `construct_x`  | `.env.construct_x`  | `"construct_x"` |
 
 ## Config
 
