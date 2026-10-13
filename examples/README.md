@@ -27,8 +27,15 @@ vars: API key set → `construct_x`, otherwise `samples`.
 from edc_client.connector import Connector
 
 # one object per connector; the first argument is the type
+# initialisation for two types of connectors are written below, pick one pair of connectors
+
+# CONSTRUCT-X EDC
 provider = Connector("construct_x", PROVIDER_MGMT_URL, PROVIDER_ID, PROVIDER_DSP_URL, PROVIDER_API_KEY)
 consumer = Connector("construct_x", CONSUMER_MGMT_URL, CONSUMER_ID, CONSUMER_DSP_URL, CONSUMER_API_KEY)
+
+# EDC SAMPLES CONNECTOR
+provider = Connector("samples", PROVIDER_MGMT_URL, PROVIDER_ID, PROVIDER_DSP_URL)
+consumer = Connector("samples", CONSUMER_MGMT_URL, CONSUMER_ID, CONSUMER_DSP_URL)
 
 # provider: offer some data
 provider.create_asset("asset-1", "https://jsonplaceholder.typicode.com/users")
@@ -38,7 +45,6 @@ provider.create_contract_definition("contract-def-1", "policy-1", "policy-1")
 # consumer: negotiate, transfer and fetch it in one call
 response = consumer.negotiate_and_transfer(provider, "asset-1")
 print(response.json())
-```
 
 The consumer only needs the provider's public DSP id and address, not its management
 API. Without access to the provider's connector, pass a `Counterparty` instead:
@@ -52,7 +58,13 @@ response = consumer.negotiate_and_transfer(provider, "asset-1")
 
 ## Quick start
 
-Run as modules from the repo root (`-m`, dotted path — not a file path):
+Copy the example env file to `.env` and adjust the values to your connectors:
+
+```bash
+cp examples/.env.example.samples examples/.env
+```
+
+Then run as modules from the repo root (`-m`, dotted path — not a file path):
 
 ```bash
 python -m examples.full_flow                    # samples flavor (default)
@@ -69,9 +81,10 @@ the connector type follows from whether that file sets `*_API_KEY`:
 
 ## Config
 
-- [`.env`](.env) — `PROVIDER_MANAGEMENT` / `PROVIDER_PROTOCOL` / `PROVIDER_ID`,
-  the same trio for `CONSUMER_*`, and `PUSH_DESTINATION_URL` (PUSH transfers only).
-  construct-x adds `*_API_KEY`; see [`.env.construct_x`](.env.construct_x).
+- `.env` — copied from [`.env.example.samples`](.env.example.samples):
+  `PROVIDER_MANAGEMENT` / `PROVIDER_PROTOCOL` / `PROVIDER_ID`, the same trio for
+  `CONSUMER_*`, and `PUSH_DESTINATION_URL` (PUSH transfers only). For construct-x,
+  create `.env.construct_x` with the same keys plus `*_API_KEY` (not committed).
 - [`connector-configs/`](connector-configs/) — EDC samples connector JAR and the
   `provider.properties` / `consumer.properties` used to launch it.
 
