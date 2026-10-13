@@ -45,6 +45,7 @@ provider.create_contract_definition("contract-def-1", "policy-1", "policy-1")
 # consumer: negotiate, transfer and fetch it in one call
 response = consumer.negotiate_and_transfer(provider, "asset-1")
 print(response.json())
+```
 
 The consumer only needs the provider's public DSP id and address, not its management
 API. Without access to the provider's connector, pass a `Counterparty` instead:
@@ -58,35 +59,54 @@ response = consumer.negotiate_and_transfer(provider, "asset-1")
 
 ## Quick start
 
-Copy the example env file to `.env` and adjust the values to your connectors:
+The examples run against one of two connector setups, picked with the `FLAVOR` env
+var. Only the samples setup is provided by this repo:
+
+|                  | samples (default)                          | construct-x                         |
+| ---------------- | ------------------------------------------ | ----------------------------------- |
+| Connectors       | provided — local pair via Docker Compose   | **not provided** — bring your own   |
+| Env file         | `.env`, copied from `.env.example.samples` | `.env.construct_x`, write it yourself |
+| `FLAVOR`         | _(unset)_                                  | `construct_x`                       |
+
+`load_env()` in [`connector.py`](connector.py) loads `.env.<FLAVOR>` if it exists,
+else `.env`. Run everything as a module from the repo root (`-m`, dotted path — not
+a file path).
+
+### samples — everything provided
+
+A provider + consumer pair of EDC samples connectors, started from the JAR and
+`provider.properties` / `consumer.properties` in [`connector-configs/`](connector-configs/).
+The example env file already points at them, so no values need changing:
 
 ```bash
 cp examples/.env.example.samples examples/.env
+docker compose -f examples/connector-configs/docker-compose.yml up -d
+python -m examples.full_flow
 ```
 
-Then run as modules from the repo root (`-m`, dotted path — not a file path):
+### construct-x — bring your own connectors and config
+
+Nothing is provided for this flavor: no connector setup and no example env file. You
+need access to two running construct-x connectors and must create
+`examples/.env.construct_x` yourself (ignored by git — it holds API keys):
 
 ```bash
-python -m examples.full_flow                    # samples flavor (default)
-FLAVOR=construct_x python -m examples.full_flow # construct-x
+PROVIDER_MANAGEMENT=   # management API URL
+PROVIDER_PROTOCOL=     # DSP protocol URL
+PROVIDER_ID=           # participant id
+PROVIDER_API_KEY=      # x-api-key for the management API
+
+CONSUMER_MANAGEMENT=
+CONSUMER_PROTOCOL=
+CONSUMER_ID=
+CONSUMER_API_KEY=
 ```
 
-`FLAVOR` selects the env file (`load_env()` in [`connector.py`](connector.py));
-the connector type follows from whether that file sets `*_API_KEY`:
+```bash
+FLAVOR=construct_x python -m examples.full_flow
+```
 
-| FLAVOR         | env file            | type            |
-| -------------- | ------------------- | --------------- |
-| _(unset)_      | `.env`              | `"samples"`     |
-| `construct_x`  | `.env.construct_x`  | `"construct_x"` |
-
-## Config
-
-- `.env` — copied from [`.env.example.samples`](.env.example.samples):
-  `PROVIDER_MANAGEMENT` / `PROVIDER_PROTOCOL` / `PROVIDER_ID`, the same trio for
-  `CONSUMER_*`, and `PUSH_DESTINATION_URL` (PUSH transfers only). For construct-x,
-  create `.env.construct_x` with the same keys plus `*_API_KEY` (not committed).
-- [`connector-configs/`](connector-configs/) — EDC samples connector JAR and the
-  `provider.properties` / `consumer.properties` used to launch it.
+`PUSH_DESTINATION_URL` is additionally needed in either env file for PUSH transfers.
 
 ## End-to-end flow — [`full_flow.py`](full_flow.py)
 

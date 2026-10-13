@@ -1,0 +1,25 @@
+# Provider + consumer EDC samples connectors, same JAR, one properties file each.
+# ponytail: the consumer shares the provider's network namespace so the
+# "localhost" addresses in the properties files work between the two connectors
+# and from the host unchanged. Split into separate networks (and rewrite the
+# properties to service names) if they ever need to run on different hosts.
+x-connector: &connector
+  image: eclipse-temurin:25-jre
+  working_dir: /app
+  volumes:
+    - .:/app:ro
+
+services:
+  provider:
+    <<: *connector
+    command: java -Dedc.fs.config=provider.properties -jar edc-samples-connector.jar
+    ports:
+      - "19191-19195:19191-19195"  # provider api/control/management/protocol/version
+      - "19291:19291"              # provider public data plane
+      - "29191-29195:29191-29195"  # consumer (published here: shared namespace)
+      - "29291:29291"
+
+  consumer:
+    <<: *connector
+    command: java -Dedc.fs.config=consumer.properties -jar edc-samples-connector.jar
+    network_mode: service:provider
