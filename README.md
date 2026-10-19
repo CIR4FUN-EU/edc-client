@@ -24,6 +24,25 @@ Then import the package:
 import edc_client
 ```
 
+### Minimal usage
+
+```python
+from edc_client.connector import Connector
+
+# one object per connector; the first argument is the type
+provider = Connector("samples", PROVIDER_MGMT_URL, PROVIDER_ID, PROVIDER_DSP_URL)
+consumer = Connector("samples", CONSUMER_MGMT_URL, CONSUMER_ID, CONSUMER_DSP_URL)
+
+# provider: offer some data
+provider.create_asset("asset-1", "https://jsonplaceholder.typicode.com/users")
+provider.create_policy("policy-1")
+provider.create_contract_definition("contract-def-1", "policy-1", "policy-1")
+
+# consumer: negotiate, transfer and fetch it in one call
+response = consumer.negotiate_and_transfer(provider, "asset-1")
+print(response.json())
+```
+
 ### Tests
 
 Execute `pytest` to run the tests.
@@ -34,10 +53,4 @@ Execute `pytest` to run the tests.
   scripts for negotiation and transfer (the hand-written usage of this client).
 - **[API & model reference](https://github.com/CIR4FUN-EU/edc-client/blob/main/docs/API_REFERENCE.md)** — full index of endpoint
   classes and request/response models.
-
-## Author
-
-Enno Mueller — [CIR4FUN-EU/edc-client](https://github.com/CIR4FUN-EU/edc-client).
-Client code generated with the [OpenAPI Generator](https://openapi-generator.tech).
-
 
