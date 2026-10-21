@@ -27,6 +27,12 @@ import edc_client
 ### Minimal usage
 
 ```python
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent / ".env.example.samples")
+
 from edc_client.connector import Connector
 
 # one object per connector; the first argument is the type
